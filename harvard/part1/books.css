@@ -1,0 +1,75 @@
+/*
+  CSS file for books.html
+*/
+
+body {
+	background-color: #0F0;
+	width: 80%;
+	margin: 0 auto;
+			
+	}
+h1{
+	color: #C60;
+	background-color: #FFF;
+	border: medium solid #C60;
+	text-align: center;
+	margin: 10px 10px 10px 30px;
+	padding: 10px;
+}
+.booklist {
+	list-style-type: none;
+	margin: 30px;	
+	
+}
+img{
+	float: right;
+	padding: 5px;
+	border: thin outset #F00;
+}
+.clearme {
+	clear:both;
+	visibility:hidden;
+}
+.book{
+	border: medium solid #F00;
+	background-color: #FFF;
+	margin: 20px 20px 20px 0px;
+	padding: 10px;
+}
+.bookcover{
+	list-style-type: none;	
+}
+.author{
+	font-style: italic;
+	color: #C06;
+	list-style-type: none;		
+}
+.title{
+	list-style-type: none;
+}
+a:link{
+	color: #00C;
+}
+a:visited{
+	color: #06F;
+}
+a:hover{
+	color: #F30;
+}
+a:active{
+	color: #363;
+}
+.publisher{
+	list-style-type: none;
+	font-variant: small-caps;
+}
+.date{
+	list-style-type: none;
+	font-size: 80%;
+	padding-top: 1ex;
+}
+.isbn{
+	list-style-type: none;
+	font-size: 80%;
+}
+	

@@ -1,0 +1,32 @@
+article, aside, figure, footer, header, nav, section {
+    display: block;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+p{
+font-style: italic;
+    padding: 0 2em;
+	}
+body {
+    
+    box-shadow: 1px 4px 30px #6D6B6B;
+    font-family: Comic Sans MS,Helvetica,sans-serif;
+    font-size: 87.5%;
+    margin: 0 auto !important;
+    width: 70%;
+}
+body img {
+	padding: 1em;
+}
+h1{
+margin:1em 1em 0em 0em;
+padding:.5em;
+color: green;
+}
+section {
+   
+    padding: 1em 1em;
+    width: 75%;
+}

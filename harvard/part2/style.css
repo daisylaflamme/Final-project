@@ -1,0 +1,57 @@
+/* CSS File for you to author for Assignment 2 Part 2 */
+html{
+	background-color: #669;
+}
+body{
+	background-color: #fff;
+	width: 80%;
+	margin: 0 auto;
+	
+}
+body a:link{
+	color:#002071;	
+}
+header{
+	background-color: #000099;
+	margin: 1px;
+}
+header img{
+	vertical-align: middle;
+	text-align: center;
+	margin: 10px;
+}
+header h1{
+	color: #FFF;
+	margin: 10px;
+	text-align: center;
+}
+header h2{
+	font-family: Calibri, Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-style: italic;
+	font-weight: bold;
+	color: #FFF;
+	margin: 20px;
+	padding: 20px;
+}
+section{
+	background-color: #FFF;
+	margin: 20px;
+}
+section h1{
+	color: #FFF;
+	background-color: #900;
+	padding: 5px;
+}
+section hr{
+	vertical-align: middle;
+	height: 1px;
+	width: 200px;		
+}
+footer{
+	background-color: #669;
+	height: 100px;
+}
+footer p{
+	padding: 30px;
+	text-align: center;
+}

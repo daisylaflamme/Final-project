@@ -1,0 +1,14 @@
+ .ui-tooltip, .arrow:after {
+background: #ebf4b2;
+border: 2px solid white;
+
+}
+.ui-tooltip {
+	
+	color: black;
+	border-radius: 20px;
+	box-shadow: 0 0 7px black;
+	font-family: "Comic Sans MS", cursive, "Old English Text MT";
+	font-size: 14px;
+	font-weight: normal;
+}

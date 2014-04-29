@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+<!--[if lt IE 9]-->
+        <script>
+            document.createElement('header');
+            document.createElement('nav');
+            document.createElement('section');
+            document.createElement('article');
+            document.createElement('aside');
+            document.createElement('footer');
+            document.createElement('hgroup');
+        </script>
+ <!--[endif]-->
+<meta charset="utf-8">
+<meta name="description" content="Daisy's contact information">
+<meta name="keywords" content=" contact, bussiness card, send message, Quincy Ma, Boston Ma, Germantown Quincy, daisy laflamme, web design, graphic design, ui, ux">
+<meta name="robots" content="index,follow"/>
+<!-- mobil device instructions -->
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contact Daisy LaFlamme</title>
+	<link rel="shortcut icon" href="images/desi.ico">
+	<link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/form.css">
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<!-- Accordeon references and scripts -->
+    <link rel="stylesheet" href="styles/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+	 <!-- Google Analytics API -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-48002628-1', 'daisylaflamme.net');
+	  ga('send', 'pageview');
+	</script>
+</head>
+
+<body>
+	<header>
+		<a href = "index.html"><img src="images/logo1.gif" alt="Daisy LaFlamme logo - Click for Home page"></a>
+		
+			
+			<h1>Web Designer</h1>
+		
+	</header>
+    
+	<nav>
+    	<ul>
+    		<li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+    		<li><a href="ws.html">Web Design</a></li>
+            <li><a href="art.html">Graphic Design</a></li>
+            <li><a href="dashboards.html">Dashboards</a></li>
+            <li><a href="projects.html">Projects</a></li>
+    		<li><a href="certificates.html">Certificates</a></li>
+            <li><a class="current" href="contact.php">Contact</a></li>
+    	</ul>
+    </nav>
+     <div class="daisyta"></div>
+	<section>
+    
+	<img class="card" src="images/card.jpg" alt="Daisy Laflamme 5082929738 Quincy MA USA">	
+    
+    <?php
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+    $from = 'From: DaisyLaflammeWebsite'; 
+    $to = 'otli4ni4ka@yahoo.com'; 
+    $subject = 'Contact';
+    $human = $_POST['human'];
+			
+    $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+				
+    if ($_POST['submit'] && $human == '4') {				 
+        if (mail ($to, $subject, $body, $from)) { 
+	    echo '<p class="send">Your message has been sent!</p>';
+	} else { 
+	    echo '<p class="red">Something went wrong, go back and try again!</p>'; 
+	} 
+    } else if ($_POST['submit'] && $human != '4') {
+	echo '<p class="red">You answered the anti-spam question incorrectly!</p>';
+    }
+	?>
+    <h1>Contact Me</h1>
+        <form method="post" action="contact.php">
+        
+    <label>Name</label>
+    <input name="name" placeholder="Your Name" required>
+            
+    <label>Email</label>
+    <input name="email" type="email" placeholder="Your Email" required>
+            
+    <label>Message</label>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+     <label>*What is 2+2? (Anti-spam)</label>
+<input name="human" placeholder="Type Your Answer">       
+    <input id="submit" name="submit" type="submit" value="Submit">
+        
+</form>
+    
+ 
+	</section>
+	<aside>
+		<h1 id="speakers">Showcase</h1>
+        <h2>Design</h2>
+		<p><a href="art.html">Graphic Design</a></p>
+		<p><a href="ws.html">Web Design</a></p>
+        <h2>Dashboards</h2>
+		<p><a href="kpi.html">KPI Dashboard</a></p>
+		<p><a href="basket.html">Market Basket Analysis</a></p>
+		<h2>Hobbies</h2>
+		<p><a href="nails.html">Nails Design</a></p>
+		<p><a href="drawings.html">Drawings</a></p>
+	</aside>
+    <div class="daisyta"></div>
+	<footer>
+   		<a href="mailto:daisy@daisylaflamme.net"><img src="images/e.gif" alt="Email"></a>
+        <a target="_blank" href = "http://daisylaflamme.com/wordpress1/"><img src="images/w.gif" alt="Wordpress Blog"></a>
+        <a target="_blank" href = "http://www.youtube.com/watch?v=cpE4PLeVico"><img src="images/y.gif" alt="YouTube Website Presintation"></a>
+        <a target="_blank" href = "http://www.facebook.com/desi.pink.5"><img src="images/f.gif" alt="Facebook Profile"></a>
+        <a target="_blank" href = "https://twitter.com/DesiPink"><img src="images/t.gif" alt="Twitter Profile"></a>
+         <a target="_blank" href = "https://github.com/daisylaflamme"><img src="images/github.gif" alt="Github Account"></a>	
+        <a target="_blank" href = "http://www.linkedin.com/in/desislavalaflamme"><img src="images/in.gif" alt="LinkedIn Profile"></a>	
+		<p>
+        <script type="text/javascript" >
+            var today = new Date();
+            document.write( "&copy;&nbsp;" );
+            document.write( today.getFullYear() );
+            document.write( ", Daisy LaFlamme, Boston, MA" )
+        </script><br>
+        <a href="mailto:daisy@daisylaflamme.net">daisy@daisylaflamme.net</a><br>1-508-292-9738
+    	</p> 
+        	
+	</footer>
+</body>
+</html>

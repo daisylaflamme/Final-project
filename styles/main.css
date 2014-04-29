@@ -1,0 +1,391 @@
+/* So the HTML5 structural tags work in older browsers */
+article, aside, figure, footer, header, nav, section {
+    display: block;
+}
+/* the styles for the elements */
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	/*background-image: url(../images/b.jpg);
+	background-repeat: repeat;
+	background-position: right top;*/
+}
+body {
+	font-family: Comic Sans MS, Helvetica, sans-serif;
+	font-size: 87.5%;
+	width: 80%;
+	margin: 20px auto !important;
+	border: 0px solid #CCCCCC;
+	border-radius:14px;
+	-moz-box-shadow: 1px 4px 30px #6d6b6b;/*FF 3.5+*/
+	-webkit-box-shadow: 1px 4px 30px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=30, Direction=166, Color=#6d6b6b)";/*IE 8*/
+	box-shadow: 1px 4px 30px #6d6b6b;
+	
+	background: #ebf4b2; /* for non-css3 browsers */	
+}
+
+a:focus, a:hover {
+	font-style: italic;
+}
+a:visited { color:#060;
+}
+/* the styles for the header */
+
+/* the styles for the web font */
+@font-face {
+	font-family: Murach;
+	src: url("HARNGTON.TTF");
+}
+header h1 {
+	float:right;
+	color: #800;
+	font-family: Murach;
+	font-weight: 900;
+	padding-top:2em;
+	padding-right:1em;	
+}
+header img {
+	width: 60%;
+	float: left;
+	padding-left: 1em;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+
+/* the styles for the navigation bar */
+nav {
+	clear: both;
+}	
+
+nav ul {
+	list-style: none;
+	padding: 2em 0 1em 0;       /* padding above and below li elements */
+	/*background-color: #98ba88;*/
+}
+nav li {
+	display: inline;
+	
+	 }
+nav a {
+	padding: .8em 2em;
+	text-decoration: none;
+	color: #fffded;
+	font-weight: bold;
+ }
+nav a.current { color: orange; }
+nav a:link {color:#690;}
+
+/* the styles for the section */
+section {
+	/*clear: left;*/
+	padding: 0em 0em 0em 3em;
+	width: 78%;
+	float: left;
+}
+section iframe{	
+	margin-right: 2px;
+	width:427px;
+	 height:356px;
+	 border:1px solid #CCC;
+	 border-width:1px 1px 0;
+	 margin-bottom:5px;	
+}
+section a:hover {
+		opacity:0.5;
+	}
+section div.ad {
+	float: left;
+	text-align: center;
+	font-size:150%;	
+	margin-right:4em;
+}
+section div.ad div.ad-details {
+	font-size:70%;	
+}
+section div.upto {
+	float: left;
+	width: 300px;
+	height: 400px;
+	border: 1px solid #0C717A;
+	-moz-border-radius: 24px;/*Firefox*/
+	-webkit-border-radius: 24px;/*Safari, Chrome*/
+	border-radius: 24px;
+	margin: 1.5em 0 0 0;
+	padding:1.2em;
+	color: #0C717A;	
+	
+	-moz-box-shadow: 0px 4px 50px #6d6b6b;/*FF 3.5+*/
+-webkit-box-shadow: 0px 4px 50px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=180, Color=#6d6b6b)";/*IE 8*/
+box-shadow: 0px 4px 50px #6d6b6b;
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=180, Color=#6d6b6b);/*IE 5.5-7*/
+}
+section div.upto p{
+	font-family: "Comic Sans MS", cursive, "Old English Text MT";
+	font-size: 120%;
+	text-align: center;
+	color: #0C717A;		
+}
+section img.card{
+	margin: 20px;
+	-moz-box-shadow: 0px 4px 50px #6d6b6b;/*FF 3.5+*/
+-webkit-box-shadow: 0px 4px 50px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=180, Color=#6d6b6b)";/*IE 8*/
+box-shadow: 0px 4px 50px #6d6b6b;
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=180, Color=#6d6b6b);/*IE 5.5-7*/	
+}
+
+section div.partners {
+	float: right;
+	width: 25%;
+	height: 200px;
+	border: 1px solid #0C717A;
+	-moz-border-radius: 24px;/*Firefox*/
+	-webkit-border-radius: 24px;/*Safari, Chrome*/
+	border-radius: 24px;
+	margin-top: 22px;
+	padding: 20px;
+	color: #0C717A;	
+	
+	-moz-box-shadow: 0px 4px 50px #6d6b6b;/*FF 3.5+*/
+-webkit-box-shadow: 0px 4px 50px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=180, Color=#6d6b6b)";/*IE 8*/
+box-shadow: 0px 4px 50px #6d6b6b;
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=180, Color=#6d6b6b);/*IE 5.5-7*/
+}
+section div.partners p{
+	font-family: "Comic Sans MS", cursive, "Old English Text MT";
+	font-size: 120%;
+	text-align: center;
+	color: #0C717A;		
+}
+section div.download ul li{
+	list-style-image: url(../images/flower.jpg);	
+}
+section div.val {
+	clear:both;
+	float:left;	
+	padding-top:50px;
+}
+section p.green{
+	color: #C33;
+	font-size: 18px;
+}
+section h1 {
+	color: #800;
+	font-size: 150%;
+	padding: .5em 0 .25em;
+}
+section h2 {
+	font-size: 120%;
+	padding-bottom: .25em;
+}
+section h5{
+	font-size: 120%;
+	color: #800;
+	padding-top:2%;
+	}
+section div.project{
+	float:left;
+	margin: .5em .5em;	
+}
+section p {
+	padding-bottom: .5em;
+}
+section p img#image {
+	-moz-box-shadow: 4px 1px 8px #6d6b6b;/*FF 3.5+*/
+	-webkit-box-shadow: 4px 1px 8px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=104, Color=#6d6b6b)";/*IE 8*/
+	box-shadow: 4px 1px 8px #6d6b6b;		
+}
+section div#accordion div img{
+	-moz-box-shadow: 4px 1px 8px #6d6b6b;/*FF 3.5+*/
+	-webkit-box-shadow: 4px 1px 8px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=104, Color=#6d6b6b)";/*IE 8*/
+	box-shadow: 4px 1px 8px #6d6b6b;		
+}
+section ul li a img {
+	-moz-box-shadow: 4px 1px 8px #6d6b6b;/*FF 3.5+*/
+	-webkit-box-shadow: 4px 1px 8px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=104, Color=#6d6b6b)";/*IE 8*/
+	box-shadow: 4px 1px 8px #6d6b6b;
+		
+}
+section a img.kpi {
+	-moz-box-shadow: 4px 1px 8px #6d6b6b;/*FF 3.5+*/
+	-webkit-box-shadow: 4px 1px 8px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=104, Color=#6d6b6b)";/*IE 8*/
+	box-shadow: 4px 1px 8px #6d6b6b;
+			
+}
+section a.fancybox img {
+	
+	margin:8px;
+	-moz-box-shadow: 4px 1px 8px #6d6b6b;/*FF 3.5+*/
+	-webkit-box-shadow: 4px 1px 8px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=104, Color=#6d6b6b)";/*IE 8*/
+	box-shadow: 4px 1px 8px #6d6b6b;
+}
+section ul li{
+		list-style-image: url(../images/flower.jpg);
+}
+section blockquote {
+	padding: 0 2em;
+	font-style: italic;
+}
+
+section ul  {
+	padding: 0 0 1.5em 1.25em;
+	
+    padding-bottom: 0.25em;
+}
+
+
+section li {
+	padding-bottom: .35em;
+}
+
+section li {
+    padding-bottom: 0.35em;
+}
+
+/* The styles for my jQuery carousel slide show  */
+#map {
+    border: 2px solid black;
+}
+section #image_list li {
+    display: inline;
+    padding: 2px;
+}
+section #image_list a {
+    border: medium none;
+}
+#rollover_heading {
+    padding-bottom: 0;
+}
+
+.fadein {
+    height: 300px;
+    position: relative;
+    width: 200px;
+}
+.resume {
+	clear: both;
+	padding:1em;
+	width: 90%;	
+	-moz-box-shadow: 2px 2px 6px #6d6b6b;/*FF 3.5+*/
+	-webkit-box-shadow: 2px 2px 6px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=135, Color=#6d6b6b)";/*IE 8*/
+	box-shadow: 2px 2px 6px #6d6b6b;
+
+}
+
+article ul li{
+	list-style-image: url(../images/flower.jpg);		
+}
+article ul{
+	padding-left: 3em;	
+}
+article h1 {
+	color: black;
+	
+}
+article h2 {
+	color: black;
+	background-image: url(../images/ws.gif);
+	background-repeat: repeat-x;
+}
+section div.resume img {
+	float: right;
+	margin: 0em 1em 2em 1em;
+	border: 1px solid #98ba88;
+}
+aside {
+	width: 15%;
+	float: left;
+	padding-left: 1em;
+}
+aside h1 {
+	color: #800;
+	font-size: 150%;
+	padding: .5em 0 .25em;
+}
+aside h2 {
+	font-size: 120%;
+	padding-bottom: .25em;
+}
+aside img {
+	padding: .3em;
+	border: 1px solid #CCCCCC;
+	border-radius:10px;
+}
+aside ul {
+	padding-left: 1em;	
+}
+aside ul li{
+	list-style-image: url(../images/flower.jpg);
+}
+aside ul.nostyle li {
+	list-style-image: none;
+	list-style-type: none;
+	padding-bottom: 1em;
+}
+figure {
+	margin-top: 1em;
+}
+figcaption {
+	color: #800;
+}
+
+.border_bottom {
+	border-bottom-width: thin;
+	border-bottom-style: none;
+}
+
+.right {
+	text-align: right;
+}
+
+/* the styles for the footer */
+
+footer {
+	clear: both;
+}
+footer p {
+	padding: 1em 1em;
+	text-align: left;
+}
+footer a img {
+	padding: 1em .1em;
+	float: right;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+footer a:hover {
+		opacity:0.5;
+	}
+.dark {
+	font-weight: bold;
+}
+.red {
+	color: #F60;
+	font-size: 150%;
+	padding: .25em;
+}
+.send {
+	color: green;
+	font-size: 150%;
+	padding:.25em;	
+}
+div.daisyta {
+	clear: both;
+	padding-top:30px;
+}

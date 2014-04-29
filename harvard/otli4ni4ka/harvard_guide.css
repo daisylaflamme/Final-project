@@ -1,0 +1,40 @@
+body{
+	background-color:#FFC;
+	font-family:"Comic Sans MS", cursive, "Old English Text MT";
+	padding: 0% 10%;
+	margin:1%;	
+}
+h1 {
+	color: #900;
+	font-size:180%;	
+	background-color:#FFC;
+	
+}
+h2 {
+	color:#900;	
+	border-bottom:double;
+	border-bottom-color:#900;
+}
+h3 {
+	color:#900;	
+	border-top: 1px thin #900;
+}
+a
+{
+	text-decoration: none;
+	
+	font-style:italic;
+	font-size:12px;
+		
+}
+p{
+		font-size: 12px;
+		padding: 1px;
+	}
+footer{
+	font-size: 9px;
+	font-style:italic;
+	border-top:double;
+	border-color:#900;
+		
+}

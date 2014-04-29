@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+
+section form {
+	width:40%;
+	margin:2em;
+	padding-right:1em;
+}
+
+label {
+	display:block;
+	margin-top:1em;
+	letter-spacing:.1em;
+}
+
+input, textarea {
+	width:90%;
+	height:1em;
+	background:#efefef;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border:1px solid #dedede;
+	padding:1em;
+	margin-top:.3em;
+	font-size:0.9em;
+	color:#3a3a3a;
+}
+
+	input:focus, textarea:focus {
+		border:1px solid #97d6eb;
+	}
+
+textarea {
+	height: 100px;
+	font-family: "Comic Sans MS", cursive, "Old English Text MT";
+	background: url(http://www.tangledindesign.com/blog/demos/contact-form/images/textarea-bg.jpg) right no-repeat #efefef;
+}
+
+#submit {
+	background:url(http://www.tangledindesign.com/blog/demos/contact-form/images/submit.jpg);
+	width:127px;
+	height:38px;
+	text-indent:-9999px;
+	border:none;
+	margin-top:2em;
+	cursor:pointer;
+}
+
+	#submit:hover {
+		opacity:0.9;
+	}

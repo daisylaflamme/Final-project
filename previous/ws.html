@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+<!--[if lt IE 9]>
+        <script>
+            document.createElement('header');
+            document.createElement('nav');
+            document.createElement('section');
+            document.createElement('article');
+            document.createElement('aside');
+            document.createElement('footer');
+            document.createElement('hgroup');
+        </script>
+ <![endif]-->
+
+	<title>Daisy LaFlamme Web Design Mockup</title>
+	<link rel="shortcut icon" href="images/desi.ico">
+	<link rel="stylesheet" href="styles/main.css">
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<!-- JavaScript HTML requirements -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script>
+    $(function() {
+    var $slider = $('.panel-inner'); //get the slider
+    var liW = 500; //define single LI width
+    var liFW = parseInt(liW * ($slider.find('li').length + 1)); //find the full width of the UL 191 * LI's
+    $slider.css('width', liFW + 'px'); //apply the full-width to the UL
+    $('.button').click(function() {
+    //if arrow right OR left, get the current left: CSS property of the UL
+    var leftX = (this.id == 'right') ? parseInt($slider.css('left').toString().replace('-', '')) : parseInt($slider.css('left'));
+    //check and see if we have reached the end OR start of the UL width
+    var leftY = (this.id == 'right') ? ((leftX + 404) == liFW) ? 0: -(leftX + liW) : (leftX < 0) ? -(parseInt(leftX.toString().replace('-', '')) - liW) : 0;
+    //apply the animation
+    rotate(leftY);
+    });
+    var rotate = function(leftY) {$slider.animate({left: leftY},500);}
+    });
+    </script>
+    <script type="text/javascript">
+    
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-33553732-1']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    
+    </script>
+</head>
+
+<body>
+	<header>
+		<a href = "index.html"><img src="images/logo1.gif" alt="Daisy LaFlamme logo - Click for Home page"></a>
+		<hgroup>
+			
+			<h1>Web Designer</h1>
+		</hgroup>
+	</header>
+    
+	<nav>
+    	<ul>
+    		<li><a  href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+    		<li><a class="current" href="ws.html">Web Design</a></li>
+            <li><a href="art.html">Graphic Design</a></li>
+            <li><a href="drawings.html">Drawings</a></li>
+    		<li><a href="nails.html">Nails Design</a></li>
+    	</ul>
+    </nav>
+     <div class="daisyta"><img src="images/daisyta.gif" alt="flower ornaments"></div>
+	<section>
+          <br>
+        <h1>Visit My Websites</h1>
+        <div id="carousel">
+        
+        <div class="panel">
+        <ul class="panel-inner" style="width: 525px;">
+        <li>
+        <h5><a target="_blank" href="http://daisylaflamme.com/">Daisy's Joomla Web Portfolio</a></h5><br>
+        <a href="http://daisylaflamme.com/" title="Using Joomla Content Management System to present a Web portfolio. Use of multiple plug-ins; customizing style sheets and templates; use of Mobil plug-ins." target="_blank"><img alt="Daisy's Joomla Web Portfolio" src="images/0.jpg"></a>       
+        </li>
+        <li>
+        <h5><a target="_blank" href="http://refugeplaceinternational.org/">Refuge Place International (Team Work)</a></h5><br>
+        <a href="http://refugeplaceinternational.org/" title="Wordpress Content Management System Website containing graphic designs, plug-ins, widgets, customized template, and APIs." target="_blank"><img alt="Refuge Place International" src="images/00.jpg"></a>       
+        </li>
+        <li>
+        <h5><a target="_blank" href="http://daisylaflamme.net/drupal/">Drupal Website</a></h5><br>
+        <a href="http://daisylaflamme.net/drupal/" title="Drupal Content Management System is used to design a custom template, member profile management database and settings. Use of Google API for mapping of the users. Modules and views." target="_blank"><img alt="Drupal Website" src="images/drupal.jpg"></a>        
+        </li>
+        <li>
+        <h5><a target="_blank" href="http://daisylaflamme.com/wordpress1/">Wordpress Blog</a></h5><br>
+        <a href="http://daisylaflamme.com/wordpress1/" title="Wordpress Content Management System. Plug-ins, customized template, third-party widgets." target="_blank"><img alt="Wordpress Blog" src="images/1.jpg"></a>
+        </li>
+        <li>
+        <h5><a target="_blank" href="http://otli4ni4ka.wix.com/daisylaflamme">Wix Website Portfolio</a></h5><br>
+        <a href="http://otli4ni4ka.wix.com/daisylaflamme" title="Using Wix Content Management System to present a Web portfolio, projects and resume." target="_blank"><img alt="Wix Website Portfolio" src="images/3.jpg"></a>
+        </li>
+        <li>
+        <h5><a target="_blank" href="http://p2.daisylaflamme.net/">Micro Blog - HTML5, CSS3, PHP, MySql</a></h5><br>
+        <a href="http://p2.daisylaflamme.net/" title="Use of Linux/Apache/MySQL/PHP framework to build a twitter-like micro-blog. It is combined with HTML5, and CSS3 code." target="_blank"><img alt="Micro Blog - Anger Management" src="images/4.jpg"></a>
+        </li>
+        <li>
+        <h5><a href="http://www.daisylaflamme.net/dwa/p3/project.html"  target="_blank">Time Manager - JavaScript/jQuery Tool</a></h5><br>
+        <a href="http://www.daisylaflamme.net/dwa/p3/project.html" title="Mini Web application/app designed with jQuery, JavaScript, HTML5, CSS3, and Photoshop tools." target="_blank"><img alt="Time manager tool - javascript/jquery" src="images/5.jpg"></a>
+        </li>
+        <li>
+        <h5><a href="http://daisylaflamme.com/moodle/enrol/index.php?id=2" target="_blank">Moodle Website</a></h5><br>
+        <a href="http://daisylaflamme.com/moodle/enrol/index.php?id=2" title="Moodle Content Management System. Custom Theme. Class, grades, assignments, projects, quizzes, exams, syllabus, slides, and videos processing." target="_blank"><img alt="Moodle Website" src="images/6.jpg"></a>
+        </li>
+        <li>
+        <h5><a href="http://globalpeaceaid.org/index.html" target="new">Global Peace Aid, Inc. Website</a></h5><br>
+        <a href="http://globalpeaceaid.org/index.html" title="Use of HTML5,CSS3, JavaScript, jQuery, Dreamweaver, Photoshop, Logo design, Google Analytic, Google APIs, PayPal API." target="_blank"><img alt="Global Peace Aid Website" src="images/7.jpg"></a>
+        </li>
+        <li>
+        <h5><a href="http://scratch.mit.edu/projects/desislava/2778494" target="_blank">Web Game</a></h5><br>
+       <a href="http://scratch.mit.edu/projects/desislava/2778494" title="A game developed with scratch programming" target="_blank"> <img alt="Web Game" src="images/8.jpg">
+        </a></li>
+        <li>
+        <h5><a href="http://p4.daisylaflamme.net/" target="_blank">Social Network for Nonprofit Organizations</a></h5><br>
+        <a href="http://p4.daisylaflamme.net/" title="Web Content Management System build on the top of LAMP framework." target="_blank"><img alt="Social Network for Hobbies" src="images/9.jpg"></a>
+        </li>
+        <li>
+        <h5><a target="_blank" href="http://www.youtube.com/watch?v=cpE4PLeVico">Drupal Website Presentation</a></h5><br>
+        <iframe width="460" height="340" src="http://www.youtube.com/embed/cpE4PLeVico" ></iframe>       
+        </li>
+        <li>
+        <h5><a href="http://www.daisylaflamme.net/dwa/p1/" target="_blank">Daisy's Bio</a></h5><br>
+        <a href="http://www.daisylaflamme.net/dwa/p1/" title="Short internship bio" target="_blank"><img alt="Daisy's Bio" src="images/01.jpg"></a>
+        </li>
+        <li>
+        <h5><a href="http://www.daisylaflamme.net/previous/index.html" target="_blank">Previous Portfolio</a></h5><br>
+        <a href="http://www.daisylaflamme.net/previous/index.html" title="My previous portfolio" target="_blank"><img alt="Daisy's Previous Portfolio" src="images/02.jpg"></a>
+        </li>
+        </ul>
+        </div><br>
+        <div id="left" class="button">
+        <img alt="click for previous image" src="images/left.jpg">
+        </div>
+        <div id="right" class="button">
+        <img alt="click for next image" src="images/right.jpg">
+        </div>
+       </div><br>
+    </section>
+	<aside>
+		<h1 id="speakers">Showcase</h1>
+        <h2>Design</h2>
+		<p><a href="art.html">Graphic Design</a></p>
+		<p><a href="ws.html">Web Design</a></p>
+        <h2>Dashboards</h2>
+		<p><a href="kpi.html">KPI Dashboard</a></p>
+		<p><a href="basket.html">Market Basket Analysis</a></p>
+		<h2>Hobbies</h2>
+		<p><a href="nails.html">Nails Design</a></p>
+		<p><a href="drawings.html">Drawings</a></p>
+	</aside><br>
+	<div class="daisyta"><img src="images/daisyta.gif" alt="flower ornaments"></div>
+	<footer>
+   		<a href="mailto:daisy@daisylaflamme.net"><img src="images/e.gif" alt="Email"></a>
+        <a target="_blank" href = "http://daisylaflamme.com/wordpress1/"><img src="images/w.gif" alt="Wordpress Blog"></a>
+        <a target="_blank" href = "http://www.youtube.com/watch?v=cpE4PLeVico"><img src="images/y.gif" alt="YouTube Website Presintation"></a>
+        <a target="_blank" href = "http://www.facebook.com/desi.pink.5"><img src="images/f.gif" alt="Facebook Profile"></a>
+        <a target="_blank" href = "https://twitter.com/DesiPink"><img src="images/t.gif" alt="Twitter Profile"></a>
+         <a target="_blank" href = "https://github.com/daisylaflamme"><img src="images/github.gif" alt="Github Account"></a>	
+        <a target="_blank" href = "http://www.linkedin.com/in/desislavalaflamme"><img src="images/in.gif" alt="LinkedIn Profile"></a>	
+		<p>
+        <script type="text/javascript" >
+            var today = new Date();
+            document.write( "&copy;&nbsp;" );
+            document.write( today.getFullYear() );
+            document.write( ", Daisy LaFlamme, Boston, MA" )
+        </script><br>
+        <a href="mailto:daisy@daisylaflamme.net">daisy@daisylaflamme.net</a><br>1-508-292-9738
+    	</p> 
+        	
+	</footer>
+</body>
+</html>
+

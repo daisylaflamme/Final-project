@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" itemscope itemtype="http://schema.org/ImageObject">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Logo Generator - 403 Forbidden</title>
+<meta name="keywords" content="free logo, twitter, twitter-font, twitter-logo, google, google-font, google-logo, logo, font" />
+<meta name="description" content="Create your free logo" />
+<meta name="robots" content="all" />
+<meta itemprop="name" content="Look at this logo">
+<meta itemprop="description" content="Create your free logo">
+<script type="text/javascript" src="/logo-generator/js/scripts.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="/logo-generator/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/logo-generator/css/style.css" media="screen" title="screen" />
+<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+</head>
+<body>
+ <div id="wrapper">
+  <div id="main">
+   <ul class="nav">
+    <li><a href="/logo-generator/">home</a></li>
+    <li><a href="/logo-generator/twitter-font" onclick="return goto(this)">twitter font</a></li>
+    <li><a href="/logo-generator/google-font" onclick="return goto(this)">google font</a></li>
+    <li><a href="http://twitter.com/home?status=Look+at+this+logo+http%3A%2F%2Fneswork.com%2Flogo-generator%2Ffont%2Fgoogle%2Frnd%2FInspirational%2520Quotes.gif+from+http%3A%2F%2Fneswork.com%2Flogo-generator%2F"><img src="/logo-generator/img/twitter.png" alt="twitter"></a></li>
+    <li><a name="fb_share"></a></li>
+    <li>
+	<g:plusone size="tall" annotation="inline" width="150"></g:plusone>
+    
+    <!-- Place this render call where appropriate -->
+    <script type="text/javascript">
+      (function() {
+          var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+              po.src = 'https://apis.google.com/js/plusone.js';
+                  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                    })();
+                    </script>
+    </li>
+   </ul>
+   <div></div>
+   <h1>403 Forbidden</h1>
+<p>You don't have permission to view the requested URL</p>
+<!--p>If you want direct access to the logos</p-->
+  </div><!-- main -->
+  <div id="sidebar">
+  </div>
+ </div><!-- wrapper -->
+</body>
+</html>

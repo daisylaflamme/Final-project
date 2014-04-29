@@ -1,0 +1,75 @@
+body{
+	width:80%;
+	margin:0 auto;	
+}
+header img{
+	width:100%;
+		
+}
+
+nav ul{
+	list-style-type: none;
+}
+nav ul li {
+	display: inline;
+	text-decoration: none;
+	padding: 10px;
+	color: #666;
+}
+nav ul li a{
+	text-decoration: none;	
+}
+
+.youarehere{
+	color: #900;
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+	border-bottom-color: #900;
+}
+nav ul li a:hover{
+	color: #300;	
+}
+
+hr{
+	background-color: #99C;
+	height: 20px;
+}
+aside {
+	float: 	left;
+	width: 25%;
+}
+aside ul li{
+	list-style-type: none;
+	margin-left:-20px;	
+	text-decoration: none;
+}
+aside ul li a{
+	text-decoration: none;
+	color: #666;		
+}
+aside ul li a:hover{
+	background-color: #CCC;
+	padding:5px;
+	margin:2px;		
+}
+section {
+	float:left;	
+	width:60%;
+	margin-left:2em;
+}
+section ul {
+	list-style-image: url('images/arrow.gif');		
+}
+section ul li {
+		display: inline;	
+}
+section ul li a{
+	text-decoration: none;	
+}
+footer{
+	clear:both;
+		
+}
+footer p{
+	font-size: small;		
+}

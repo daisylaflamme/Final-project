@@ -1,0 +1,68 @@
+body{
+	background-color:#FFC;
+	font-family:"Comic Sans MS", cursive, "Old English Text MT";
+	padding: 0% 10%;
+	margin:1%;	
+}
+h1 {
+	color: #900;
+	font-size:180%;	
+	background-color:#FFC;
+	
+}
+form{
+	padding: 50px;
+	margin: 4px;
+	background-color:#ECEBEA;
+	font-size:12px;
+	border: 1px solid black;
+	border-radius:20px;
+	width: 300px;	
+}
+input [type="text"]{
+	width: 100px;
+	margin: 5px 5px;
+	}
+legend {
+	font-size:14px;
+	color: #600;
+	padding: 10px;
+	}
+div {
+	font-weight:bold;
+	padding: 10px 0px 0px;
+	}
+select{
+	width: 200px;	
+}
+label {	
+	padding:3px;	
+	}
+fieldset{
+	margin:20px;
+	width: 200px;
+}		
+h2 {
+	color:#900;	
+	border-bottom:double;
+	border-bottom-color:#900;
+}
+h3 {
+	color:#900;	
+	border-top: 1px thin #900;
+}
+a
+{
+	text-decoration: none;
+	font-style:italic;
+	font-size:12px;
+		
+}
+p{
+		font-size: 12px;
+		padding: 1px;
+		font-style:italic;
+		border-top:double;
+		border-color:#900;
+		
+}

@@ -1,0 +1,325 @@
+/* So the HTML5 structural tags work in older browsers */
+article, aside, figure, footer, header, nav, section {
+    display: block;
+}
+/* the styles for the elements */
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	background-image: url(../images/b.jpg);
+	background-repeat: repeat;
+	background-position: right top;
+}
+body {
+	font-family: Comic Sans MS, Helvetica, sans-serif;
+	font-size: 87.5%;
+	width: 80%;
+	margin: 0 auto;
+	-moz-box-shadow: 1px 4px 30px #6d6b6b;/*FF 3.5+*/
+	-webkit-box-shadow: 1px 4px 30px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=30, Direction=166, Color=#6d6b6b)";/*IE 8*/
+	box-shadow: 1px 4px 30px #6d6b6b;
+	
+	background: #ebf4b2; /* for non-css3 browsers */	
+}
+a:focus, a:hover {
+	font-style: italic;
+}
+a:visited { color:#060;
+}
+/* the styles for the header */
+
+/* the styles for the web font */
+@font-face {
+	font-family: Murach;
+	src: url("HARNGTON.TTF");
+}
+header h1 {
+	float:right;
+	color: #800;
+	font-family: Murach;
+	font-weight: 900;
+	padding-top:2em;
+	padding-right:1em;	
+}
+header img {
+	width: 60%;
+	float: left;
+	padding-left: 1em;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+
+/* the styles for the navigation bar */
+nav {
+	clear: both;
+}	
+
+nav ul {
+	list-style: none;
+	padding: 1em 0;       /* padding above and below li elements */
+	/*background-color: #98ba88;*/
+}
+nav li {
+	display: inline; }
+nav a {
+	padding: .8em 2em;
+	text-decoration: none;
+	color: #fffded;
+	font-weight: bold;
+ }
+nav a.current { color: orange; }
+nav a:link {color:#690;}
+
+/* the styles for the section */
+section {
+	clear: left;
+	padding: 0 2em;
+	width: 70%;
+	float: right;
+}
+section div.download ul li{
+	list-style-image: url(../images/flower.jpg);	
+}
+section div.val {
+	float:right;	
+}
+section p.green{
+	color: #C33;
+	font-size: 18px;
+}
+section h1 {
+	color: #800;
+	font-size: 150%;
+	padding: .5em 0 .25em;
+}
+section h2 {
+	font-size: 120%;
+	padding-bottom: .25em;
+}
+section h5{
+	font-size: 120%;
+	color: #800;
+	padding-top:2%;
+	}
+section p {
+	padding-bottom: .5em;
+}
+section p img#image {
+	-moz-box-shadow: 4px 1px 8px #6d6b6b;/*FF 3.5+*/
+	-webkit-box-shadow: 4px 1px 8px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=104, Color=#6d6b6b)";/*IE 8*/
+	box-shadow: 4px 1px 8px #6d6b6b;		
+}	
+section ul li a img {
+	-moz-box-shadow: 4px 1px 8px #6d6b6b;/*FF 3.5+*/
+	-webkit-box-shadow: 4px 1px 8px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=104, Color=#6d6b6b)";/*IE 8*/
+	box-shadow: 4px 1px 8px #6d6b6b;
+		
+}
+section a img.kpi {
+	-moz-box-shadow: 4px 1px 8px #6d6b6b;/*FF 3.5+*/
+	-webkit-box-shadow: 4px 1px 8px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=104, Color=#6d6b6b)";/*IE 8*/
+	box-shadow: 4px 1px 8px #6d6b6b;
+			
+}
+section ul li{
+		list-style-image: url(../images/flower.jpg);
+}
+section blockquote {
+	padding: 0 2em;
+	font-style: italic;
+}
+
+section ul  {
+	padding: 0 0 1.5em 1.25em;
+	
+    padding-bottom: 0.25em;
+}
+
+
+section li {
+	padding-bottom: .35em;
+}
+
+section li {
+    padding-bottom: 0.35em;
+}
+
+/* The styles for my jQuery carousel slide show  */
+#map {
+    border: 2px solid black;
+}
+section #image_list li {
+    display: inline;
+    padding: 2px;
+}
+section #image_list a {
+    border: medium none;
+}
+#rollover_heading {
+    padding-bottom: 0;
+}
+#carousel {
+    margin: 10px 0 0;
+    padding: 0;
+    width: 500px;
+	height: 400px;
+	
+}
+.button {
+    float: left;
+    height: 25px;
+    margin: 10px;
+    width: 25px;
+}
+.panel {
+    float: left;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    width: 500px;
+	height: 400px;
+	-moz-box-shadow: 4px 1px 8px #6d6b6b;/*FF 3.5+*/
+	-webkit-box-shadow: 4px 1px 8px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=104, Color=#6d6b6b)";/*IE 8*/
+	box-shadow: 4px 1px 8px #6d6b6b;
+	
+	
+		
+}
+.panel-inner {
+    left: 0;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+	height:400px;
+	
+}
+.panel-inner li {
+	float: left;
+	height: 400px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	width: 500px;
+	background-image: url(../images/ws.gif);
+	background-repeat: repeat-x;
+}
+.panel-inner li a {
+	text-decoration: none;
+}
+.panel-inner li img {
+    height: 400px;
+    width: 500px;
+	background:#f5def4;
+	outline: 1px outset #5ea663;
+}
+.fadein {
+    height: 300px;
+    position: relative;
+    width: 200px;
+}
+.resume {
+	padding:1em;
+	-moz-box-shadow: 2px 2px 6px #6d6b6b;/*FF 3.5+*/
+	-webkit-box-shadow: 2px 2px 6px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=135, Color=#6d6b6b)";/*IE 8*/
+	box-shadow: 2px 2px 6px #6d6b6b;
+
+}
+article ul li{
+	list-style-image: url(../images/flower.jpg);		
+}
+article ul{
+	padding-left: 3em;	
+}
+article h1 {
+	color: black;
+	
+}
+article h2 {
+	color: black;
+	background-image: url(../images/ws.gif);
+	background-repeat: repeat-x;
+}
+section div.resume img {
+	float: right;
+	margin: 0em 1em 2em 1em;
+	border: 1px solid #98ba88;
+}
+aside {
+	width: 20%;
+	float: left;
+	padding-left: 2em;
+}
+aside h1 {
+	color: #800;
+	font-size: 150%;
+	padding: .5em 0 .25em;
+}
+aside h2 {
+	font-size: 120%;
+	padding-bottom: .25em;
+}
+aside img {
+	padding-bottom: 1em;
+}
+aside ul {
+	padding-left: 2em;	
+}
+aside ul li{
+	list-style-image: url(../images/flower.jpg);
+}
+figure {
+	margin-top: 1em;
+}
+figcaption {
+	color: #800;
+}
+
+.border_bottom {
+	border-bottom-width: thin;
+	border-bottom-style: none;
+}
+
+.right {
+	text-align: right;
+}
+
+/* the styles for the footer */
+
+footer {
+	clear: both;
+}
+footer p {
+	padding: 1em 1em;
+	text-align: left;
+}
+footer a img {
+	padding: 1em .1em;
+	float: right;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.dark {
+	font-weight: bold;
+}
+.red {
+	color: red;	
+}
+div.daisyta {
+	clear: both;
+	background-image: url(../images/daisyta.gif);
+	background-repeat: repeat-x;
+}
