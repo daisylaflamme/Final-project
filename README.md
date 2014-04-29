@@ -1,4 +1,12 @@
 Final-project
 =============
 
-This project is an 
+Ideas for the final project:
+
+Professional portfolio with animations, and social media APIs.
+
+Motivation: For a long time I am planning to update my outdated professional portfolio. I want to use what I learned in this class to redesign my portfolio. Specificly, I want to use css animations, canvas with processing, and APIs of Linkedin, Tweeter, Google, Facebook and maybe others.
+
+Goal: I want to impress the viewers of my portfolio.
+
+Audience: current customers, future customers, recruiters, future employers, friends, professional network.
