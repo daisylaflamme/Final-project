@@ -10,3 +10,8 @@ Motivation: For a long time I am planning to update my outdated professional por
 Goal: I want to impress the viewers of my portfolio.
 
 Audience: current customers, future customers, recruiters, future employers, friends, professional network.
+
+Functional specifications:
+* Animated navigation on the home page: Each navigational button will be an interactive leave of a flower;
+* APIs: I want to have social media widgets in the contact page;
+* APIs: I want to visualize with processing my comunication/network.
