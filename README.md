@@ -15,3 +15,4 @@ Functional specifications:
 * Animated navigation on the home page: Each navigational button will be an interactive leave of a flower;
 * APIs: I want to have social media widgets in the contact page;
 * APIs: I want to visualize with processing my comunication/network.
+* Responsive designs

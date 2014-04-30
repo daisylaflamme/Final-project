@@ -1,0 +1,152 @@
+/* this is my custom CSS */
+body {
+	background: -moz-linear-gradient(270deg, #090909 0%, #b1b1a2 100%);/* FF3.6+ */
+    background: -webkit-gradient(linear, 270deg, color-stop(0%, #090909), color-stop(100%, #b1b1a2));/* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(270deg, #090909 0%, #b1b1a2 100%);/* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(270deg, #090909 0%, #b1b1a2 100%);/* Opera 11.10+ */
+    background: -ms-linear-gradient(270deg, #090909 0%, #b1b1a2 100%);/* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#090909', endColorstr='#b1b1a2', GradientType='1'); /* for IE */
+    background: linear-gradient(180deg, #090909 0%, #b1b1a2 100%);/* W3C */
+	font-family: @g-font;
+	color: @brand-primary;
+	h1, h2, h3, h4, h5, h6, p {
+	    color:@brand-primary;
+    }
+    a img:hover {
+	   opacity: 0.5;
+	}
+}
+.header-footer{
+    background: url(../images/lace1.png) repeat scroll @red;
+	border-bottom:  1px solid red;
+	color: @txt-color;
+	font-family: @g-font;   
+}
+header {
+    .header-footer;
+	h3{
+	    color:@txt-color;
+	    font-family: @g-font;
+	}
+	h4{
+	    font-family: @g-font;   
+	}
+}
+header h3, header h4, footer form {
+    padding-left:20px;
+}
+.dark-primary{
+    color:@dark-primary;
+}
+.test {
+    background: @red;
+    left: -5px;
+    min-height: 119px;
+    position: absolute;
+    top: 9px;
+    visibility: visible;
+    width: 250px; 
+    border-radius: 10px;
+    text-align: center;
+    background: url(../images/lace1.png) repeat-x scroll center center @red;
+}
+.social-media {
+	padding-top: 1em;
+	a {
+	    margin:.5em;
+	}
+}
+.navbar-custom {
+    border: none;
+	background-color: transparent;
+}
+/**
+.col-xs-12.label-xs-width, div.col-xs-12 input.input-xs-width {
+	display: block;
+	width: 180px;
+	margin: 0 auto;
+}
+.col-xs-12.button-xs-width {
+	display: block;
+	width: 50px;
+	margin: 0 auto;
+}
+**/
+
+.xs-container.col-xs-12 {
+	min-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.xs-container.col-xs-12 {
+	min-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.wide {
+	width:80%;
+	background: url(../images/lace1.png) repeat-x scroll @red;
+}
+.right-pdng{
+	padding-right:200px;
+}
+.left-pdng{
+	padding-left:200px;
+}
+.pdng {
+	padding:20px;
+}
+.formbox {
+    min-height: 100px;
+    width: 200px;
+    padding-top:.5em;
+    textarea{
+        height:60px;
+    }
+    button {
+        background: url(../images/lace1.png) repeat-x scroll center center @red;
+    }
+}
+.btn-danger{
+   background: url(../images/lace1.png) repeat-x scroll center center @red;
+}
+.contact {
+    input{
+        width:80%;
+    }
+    textarea {
+        width: 80%;  
+        height: 150px;
+    }
+}
+.my-icon {
+    margin:1em;
+}
+.mark{
+    padding:.5em;
+}
+.narrow-p{
+    max-width: 400px;
+}
+footer {
+	.header-footer;
+	border-top: 1px solid red;
+    address {
+	font-size: 70%;
+    }
+    ul{
+        list-style-type:none;
+        text-decoration:none;
+    }
+}
+.more-info {
+    color: #36A2C1;
+    font-family: @g-font;
+    font-size: 18px;
+    padding-right: 13px;
+}
+

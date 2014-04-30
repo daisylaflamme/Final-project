@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariya Holbrook | Contact</title>
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<!--Google font: font-family: 'Prosto One', cursive;-->
+	<link href='http://fonts.googleapis.com/css?family=Prosto+One' rel='stylesheet' type='text/css'>
+   <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/respond.js"></script>    
+</head>
+<body>
+
+	<!-- row 1 -->
+    <header class="row">
+        <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-6">
+           
+			<a href="index.html"><h3>Mariya Holbrook</h3></a>
+			<h4>Graphic Designer</h4>
+			
+        </div>
+		<div class="col-lg-5 col-lg-offset-1 col-md-6 col-sm-7 col-xs-6">
+			<nav class="navbar navbar-default navbar-custom" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="collapse">
+					<ul class="nav navbar-nav">
+					  <li><a href="index.html">Home</a></li>
+					  <li><a href="portfolio.html">Portfolio</a></li>
+					  <li class="dropdown"><a href="bio.html" data-toggle="dropdown">About Me<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="bio.html">Bio</a></li>
+							<li><a href="resume.html">Resume</a></li>
+						</ul>
+					  </li>						
+					  <li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>	
+			</nav>
+		</div>
+    </header>
+<div class="container">	
+   <br><br>
+	<div class="clearfix"></div>
+	
+	<!-- row 2 -->
+    <div class="row">	
+        <div class="col-lg-4 col-md-6 col-sm-6">
+			<h1 class="dark-primary"> Contact Me </h1>
+			<p>Thank you for your interest! </p>
+								<!--	<?php
+							$name = $_POST['name'];
+							$email = $_POST['email'];
+							$message = $_POST['message'];
+							$from = 'From: MariyaHolbrookWebsite'; 
+							$to = 'puhcho81@yahoo.com'; 
+							$subject = 'Contact';
+							$human = $_POST['human'];
+									
+							$body = "From: $name\n E-Mail: $email\n Message:\n $message";
+										
+							if ($_POST['submit'] && $human == '4') {				 
+								if (mail ($to, $subject, $body, $from)) { 
+								echo '<p class="send">Your message has been sent!</p>';
+							} else { 
+								echo '<p class="red">Something went wrong, go back and try again!</p>'; 
+							} 
+							} else if ($_POST['submit'] && $human != '4') {
+							echo '<p class="red">You answered the anti-spam question incorrectly!</p>';
+							}
+							?>-->
+
+        <form role="form"  method="post" action="contact.html">
+			<div class="form-group name-group">
+				<label for="name">Name <span class="glyphicon glyphicon-star"></span></label> <br>
+				<input name="name" id="name" type="text" class="form-control" placeholder="Your Name" required>
+				<span class="help-block"></span>
+			</div>
+			<div class="form-group email-group">
+				<label for="email">Email <span class="glyphicon glyphicon-star"></span></label><br>
+				<input name="email" id="email" type="email" class="form-control" placeholder="Your Email" required>
+				<span class="help-block"></span>
+			</div>
+			<div class="form-group message-group">
+				<label for="message">Message <span class="glyphicon glyphicon-star"></span></label><br>
+				<textarea name="message" id="message" class="form-control" placeholder="Your Message" required></textarea>
+				<span class="help-block"></span>
+			</div>
+			<div class="form-group human-group">
+				<label for="human">What is 2+2? (Anti-spam) <span class="glyphicon glyphicon-star"></span></label><br>
+				<input name="human" id="human" class="form-control" placeholder="Type Your Answer">  <br> 
+				<span class="help-block"></span>
+				<!-- Original line
+				<input id="submit" name="submit" type="submit" value="Submit">
+				-->
+				<button id="submit" name="submit" type="submit" class="btn btn-danger form-control">Submit</button>
+			</div>
+		</form>
+						
+					
+        </div>
+		<div class="col-lg-6 col-lg-offset-2 col-md-6 col-sm-6">
+			<h1 class="dark-primary">Connect with Me:</h1>
+			<br>
+			<a class="my-icon" target="_blank" href="https://www.facebook.com/mimka.krasimirova"><img src="images/ff.png" alt="Facebook"></a>
+			<a class="my-icon" target="_blank" href="http://www.linkedin.com/pub/mariya-holbrook/62/201/2b8"><img src="images/lnn.png" alt="LinkedIn"></a>
+			<a class="my-icon" target="_blank" href="mailto:puhcho81@yahoo.com"><img src="images/mail.png" alt="Email"></a>
+				<br><br><br>
+			<address>
+				  Cape Cod location:<br>
+				  Dennisport <br>
+				  MA 02639, USA<br>
+				  Email: <a href="mailto:puhcho81@yahoo.com">puhcho81@yahoo.com</a><br>
+				  <abbr title="Phone">P</abbr>hone: 1-774-810-0034
+			</address>
+			<br><br>
+			<address>
+				  Boston location:<br>
+				  Quincy <br>
+				  MA 02169, USA<br>
+				  Email: <a href="mailto:puhcho81@yahoo.com">puhcho81@yahoo.com</a><br>
+				  <abbr title="Phone">P</abbr>hone: 1-774-810-0034
+			</address>
+		</div>		
+    </div>
+<br><br><br><br>
+</div><!-- close container-->	
+	<!-- row 7 footer-->
+	<footer class="row">
+         <div class="col-lg-4  col-lg-offset-1 col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 social-media">
+            <a target="_blank" href="https://www.facebook.com/mimka.krasimirova"><img src="images/ff.png" alt="Facebook"></a>
+			<a target="_blank" href="http://www.linkedin.com/pub/mariya-holbrook/62/201/2b8"><img src="images/lnn.png" alt="LinkedIn"></a>
+			<a target="_blank" href="mailto:puhcho81@yahoo.com"><img src="images/mail.png" alt="Email"></a>
+			<br><br>
+			<address>
+			  Dennisport <br>
+				  MA 02639, USA<br>
+				  Email: <a href="mailto:puhcho81@yahoo.com">puhcho81@yahoo.com</a><br>
+				  <abbr title="Phone">P</abbr>hone: 1-774-810-0034
+			</address>
+			<p><small>&copy; 2013, Mariya Holbrook. All rights reserved.</small></p>
+         </div>
+         <div class="col-lg-3 col-md-3  col-sm-3">
+			<br>
+			<ul>
+					  <li><a href="index.html">Home</a></li>
+					  <li><a href="portfolio.html">Portfolio</a></li>
+					  <li><a href="bio.html">Bio</a></li>
+					  <li><a href="resume.html">Resume</a></li>
+					  <li><a href="contact.html">Contact</a></li>
+			</ul>
+         </div>
+		 <div class="col-lg-4 col-md-4 col-sm-4">
+						<!--<form class="form-horizontal formbox" role="form">
+							<p> Contact Me </p>
+						  <div class="form-group">
+							<div class="col-lg-12">
+								<input type="text" class="form-control input-sm" placeholder="Subject">
+							</div>	
+						 </div>	
+						 
+						  <div class="form-group">
+							
+							<div class="col-lg-12">
+							  <input type="email" class="form-control input-sm" id="inputEmail26" placeholder="Your Email">
+							</div>
+						  </div>
+						  
+						  <div class="form-group">
+							<div class="col-lg-12">
+							  <textarea class="form-control" rows="3"></textarea>
+							</div>
+						  </div>
+						  
+						  <div class="form-group">
+							<div class="col-lg-12">
+							  <button type="submit" class="btn btn-danger ">Submit</button>
+							</div>
+						  </div>
+						</form>-->
+		</div>
+		
+    </footer>
+	
+
+<!-- javascript -->
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+      	$(document).ready(function(){
+      		
+      		$('#name').focusout(function(){
+      			if($('#name').val().length == 0) {
+      				$('.name-group .help-block').text('Please enter your name.');
+      				$('.name-group').attr({
+      					class: 'has-error form-group name-group'
+      				}); //end attr
+					$('.name-group label').css({
+      					color: "red"
+      				}); //end css
+      			} else {
+      				$('.name-group .help-block').text('');
+      				$('.name-group').attr({
+      					class: 'form-group name-group'
+      				}); //end attr
+					$('.name-group label').css({
+      					color: "white"
+      				}); //end css
+      			}
+      		}); //end focus out
+			
+			$('#email').focusout(function(){
+      			if($('#email').val().length == 0) {
+      				$('.email-group .help-block').text('Please enter your email.');
+      				$('.email-group').attr({
+      					class: 'has-error form-group email-group'
+      				}); //end attr
+					$('.email-group label').css({
+      					color: "red"
+      				}); //end css
+      			} else {
+      				$('.email-group .help-block').text('');
+      				$('.email-group').attr({
+      					class: 'form-group email-group'
+      				}); //end attr
+					$('.email-group label').css({
+      					color: "white"
+      				}); //end css
+      			}
+      		}); //end focus out
+			
+			$('#message').focusout(function(){
+      			if($('#message').val().length == 0) {
+      				$('.message-group .help-block').text('Please enter a message.');
+      				$('.message-group').attr({
+      					class: 'has-error form-group message-group'
+      				}); //end attr
+					$('.message-group label').css({
+      					color: "red"
+      				}); //end css
+      			} else {
+      				$('.message-group .help-block').text('');
+      				$('.message-group').attr({
+      					class: 'form-group message-group'
+      				}); //end attr
+					$('.message-group label').css({
+      					color: "white"
+      				}); //end css
+      			}
+      		}); //end focus out
+			
+			$('#human').focusout(function(){
+      			if($('#human').val().length == 0) {
+      				$('.human-group .help-block').text('Please answer the anti-spam question!');
+      				$('.human-group').attr({
+      					class: 'has-error form-group human-group'
+      				}); //end attr
+					$('.human-group label').css({
+      					color: "red"
+      				}); //end css
+      			} else {
+      				$('.human-group .help-block').text('');
+      				$('.human-group').attr({
+      					class: 'form-group human-group'
+      				}); //end attr
+					$('.human-group label').css({
+      					color: "white"
+      				}); //end css
+      			}
+      		}); //end focus out
+
+      	}); //end ready
+      </script>
+</body>
+</html>
