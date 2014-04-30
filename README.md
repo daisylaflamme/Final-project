@@ -16,3 +16,5 @@ Functional specifications:
 * APIs: I want to have social media widgets in the contact page;
 * APIs: I want to visualize with processing my comunication/network.
 * Responsive designs
+
+![Illustration of suggested extension #5](./wireframes/home-page-2.JPG)
