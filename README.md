@@ -17,4 +17,4 @@ Functional specifications:
 * APIs: I want to visualize with processing my comunication/network.
 * Responsive designs
 
-![Illustration of suggested extension #5](./wireframes-april29-20014/home-page.JPG)
+![Illustration of suggested extension #5](./wireframes-april29-2014/home-page.JPG)
