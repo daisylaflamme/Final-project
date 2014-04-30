@@ -45,7 +45,8 @@ header h1 {
 	font-family: Murach;
 	font-weight: 900;
 	padding-top:2em;
-	padding-right:1em;	
+	padding-right:1em;
+	font-family: 'Prosto One',cursive;	
 }
 header img {
 	width: 60%;

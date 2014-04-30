@@ -24,6 +24,10 @@
 <!-- mobil device instructions -->
 <meta name="viewport" content="width=device-width; initial-scale=1.0">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Prosto+One' rel='stylesheet' type='text/css'>
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script src="js/respond.js"></script>
 	<title>Contact Daisy LaFlamme</title>
 	<link rel="shortcut icon" href="images/desi.ico">
 	<link rel="stylesheet" href="styles/main.css">
@@ -143,5 +147,8 @@
     	</p> 
         	
 	</footer>
+        <!-- javascript -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
