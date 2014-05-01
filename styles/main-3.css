@@ -413,7 +413,19 @@ height:35%;width:35%;border-radius:35%;border-width:5%;top:40%;left:40%;
 
 }
 .flower_container:hover .stigma{height:35%;width:35%;border-radius:50%;border-width:5%;top:45%;left:45%;}
-.petal{height:30%;width:30%;position:absolute;background-color:#f00;color:#fff;border:2% solid #800;text-align:center;font-size:21px;font-family:'helvetica';line-height:30%;border-radius:50% 50% 4% 50%;/*50% 50% 20% 50%;*/z-index:2;
+.petal{
+	height:30%;
+	width:30%;
+	position:absolute;
+	background-color:orange;
+	color:#fff;
+	border:2% solid #800;
+	text-align:center;
+	font-size:21px;
+	font-family:'helvetica';
+	line-height:30%;
+	border-radius:50% 50% 4% 50%;/*50% 50% 20% 50%;*/
+	z-index:2;
 
 border-width:2% 0% 0% 2%;
 
@@ -531,7 +543,7 @@ transition: all 1s ease-in;
 -moz-transition: all 1s ease-in;
 -webkit-transition: all 1s ease-in;
 -o-transition: all 1s ease;-in}
-.petal.num_1,.petal.num_3,.petal.num_5,.petal.num_7{background-color:#e00;}
+.petal.num_1,.petal.num_3,.petal.num_5,.petal.num_7{background-color:orange;}
 .flower_container:hover .petal.num_1{top:45%;left:13%;/**/transform:rotate(-45deg);-ms-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-o-transform:rotate(-45deg);/**/}
 .flower_container:hover .petal.num_2{top:20%;left:20%;/**/transform:rotate(0deg);-ms-transform:rotate(0deg);-moz-transform:rotate(0deg);-webkit-transform:rotate(0deg);-o-transform:rotate(0deg);/**/}
 .flower_container:hover .petal.num_3{top:11%;left:45%;/**/transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);-o-transform:rotate(45deg);/**/}
