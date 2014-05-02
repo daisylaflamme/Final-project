@@ -10,22 +10,24 @@ article, aside, figure, footer, header, nav, section {
 html {
 	background-image: url(../images/bg.jpg);
 	background-repeat: repeat;
-	background-position: right top;*/
+	background-position: right top;
 }
 body {
 	font-family: Comic Sans MS, Helvetica, sans-serif;
+	/*
 	font-size: 87.5%;
 	width: 80%;
 	margin: 20px auto !important;
 	border: 0px solid #CCCCCC;
 	border-radius:14px;
-	-moz-box-shadow: 1px 4px 30px #6d6b6b;/*FF 3.5+*/
-	-webkit-box-shadow: 1px 4px 30px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
-	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=30, Direction=166, Color=#6d6b6b)";/*IE 8*/
+	-moz-box-shadow: 1px 4px 30px #6d6b6b;
+	-webkit-box-shadow: 1px 4px 30px #6d6b6b;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=30, Direction=166, Color=#6d6b6b)";
 	box-shadow: 1px 4px 30px #6d6b6b;
-	
-	background: #ebf4b2; /* for non-css3 browsers */	
+	*/
+	background: #ebf4b2; 
 	background-image: url(../images/bg.jpg);
+
 }
 
 a:focus, a:hover {
@@ -405,7 +407,7 @@ div.daisyta {
 .flower_container p a{
 	visibility:hidden;
 }
-.stigma{background-color:#ff0;border:5% solid #dd0;height:20%;width:20%;border-radius:50%;position:absolute;top:47%;left:47%;z-index:2;
+.stigma{background-color:#ff0;border:10px solid #dd0;height:20%;width:20%;border-radius:50%;position:absolute;top:47%;left:47%;z-index:2;
 transition: all 1s ease;
 -moz-transition: all 1s ease;
 -webkit-transition: all 1s ease;
@@ -422,20 +424,18 @@ height:35%;width:35%;border-radius:50%;border-width:5%;top:40%;left:40%;
 	position:absolute;
 	background-color:#FF0066;
 	color:#fff;
-	border:2% solid #800;
+	border:2px solid #fff;
 	text-align:center;
 	font-size:21px;
 	font-family:'helvetica';
 	line-height:30%;
 	border-radius:50% 50% 4% 50%;/*50% 50% 20% 50%;*/
 	z-index:2;
-
-border-width:2% 0% 0% 2%;
-
-transition: all 1s ease;
--moz-transition: all 1s ease;
--webkit-transition: all 1s ease;
--o-transition: all 1s ease;
+	border-width:2% 0% 0% 2%;
+	transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-o-transition: all 1s ease;
 }
 .petal p {
 	color:#fff;
@@ -445,6 +445,7 @@ transition: all 1s ease;
 .petal a {
 	color:#fff;
 }
+
 .flower_container:hover .petal{height:35%;width:35%;}
 .num_1{top:30%;left:30%;}
 .flower_container:hover .petal.num_1{top:20%;left:20%;}
@@ -548,7 +549,7 @@ h2.message{font-family:'helvetica';font-size:14px;font-weight:normal;text-align:
 transition: all 1s ease-in;
 -moz-transition: all 1s ease-in;
 -webkit-transition: all 1s ease-in;
--o-transition: all 1s ease;-in}
+-o-transition: all 1s ease-in}
 .petal.num_1,.petal.num_3,.petal.num_5,.petal.num_7{background-color:#FF0033;}
 .flower_container:hover .petal.num_1{top:45%;left:13%;/**/transform:rotate(-45deg);-ms-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-o-transform:rotate(-45deg);/**/}
 .flower_container:hover .petal.num_2{top:20%;left:20%;/**/transform:rotate(0deg);-ms-transform:rotate(0deg);-moz-transform:rotate(0deg);-webkit-transform:rotate(0deg);-o-transform:rotate(0deg);/**/}
