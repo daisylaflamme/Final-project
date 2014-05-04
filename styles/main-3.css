@@ -1,0 +1,310 @@
+/* So the HTML5 structural tags work in older browsers */
+article, aside, figure, footer, header, nav, section {
+    display: block;
+}
+/* the styles for the elements */
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	/*background-image: url(../images/bg.jpg);
+	background-repeat: repeat;
+	background-position: right top;*/
+	
+}
+body {
+	font-family: Comic Sans MS, Helvetica, sans-serif;
+	height:100%;
+	/*
+	font-size: 87.5%;
+	width: 80%;
+	margin: 20px auto !important;
+	border: 0px solid #CCCCCC;
+	border-radius:14px;
+	-moz-box-shadow: 1px 4px 30px #6d6b6b;
+	-webkit-box-shadow: 1px 4px 30px #6d6b6b;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=30, Direction=166, Color=#6d6b6b)";
+	box-shadow: 1px 4px 30px #6d6b6b;
+	*/
+	background-image: url(../images/bg.jpg);
+	background-position: right;
+	background-repeat: no-repeat;
+	
+}
+
+a:focus, a:hover {
+	font-style: italic;
+}
+a:visited { color:#060;
+}
+
+@font-face {
+	font-family: Murach;
+	src: url("HARNGTON.TTF");
+}
+
+footer {
+	clear: both;
+
+}
+footer p {
+	padding: 1em 1em .2em 0em;
+	margin-left:2em;	
+	clear:both;
+	float: left;
+	color:white;
+
+}
+footer a {
+	color:white;
+
+}
+footer a img {
+	padding: 5em .1em 0em 0em;
+	float: left;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	z-index:100000000;
+}
+footer a:hover {
+	opacity:0.5;
+}
+.dark {
+	font-weight: bold;
+}
+.red {
+	color: #F60;
+	font-size: 150%;
+	padding: .25em;
+}
+.send {
+	color: green;
+	font-size: 150%;
+	padding:.25em;	
+}
+div.daisyta {
+	clear: both;
+	padding-top:30px;
+}
+
+
+
+/* http://www.rowsdower.org/other/?page=css_transitions_create_a_blooming_flower */
+.flower_container{
+  position:relative;
+  height:600px;
+  width:600px;
+  border:1% solid #333;
+  margin-top: -50px;
+  margin-left:-50px;
+}
+.flower_container a p{
+	visibility:hidden;
+}
+.stigma{background-color:#FFFF99;border:0px solid #dd0;height:30%;width:35%;border-radius:50%;position:absolute;top:45%;left:45%;z-index:2;
+transition: all 1s ease;
+-moz-transition: all 1s ease;
+-webkit-transition: all 1s ease;
+-o-transition: all 1s ease;
+
+height:35%;width:35%;border-radius:50%;border-width:5%;top:45%;left:45%;
+-moz-box-shadow: 2px 2px 6px #6d6b6b;/*FF 3.5+*/
+-webkit-box-shadow: 2px 2px 6px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=135, Color=#6d6b6b)";/*IE 8*/
+box-shadow: 2px 2px 6px #6d6b6b;
+text-align: center;
+}
+
+.stigma:after {
+  content : "";
+  display: block;
+  position: absolute;
+  border-radius:50%;
+  top: 0;
+  left: 0;
+  background-image: url(../images/stem.jpeg);
+  width: 100%;
+  height: 100%;
+  opacity : .4;
+  z-index: 10;
+}
+.stigma h1{
+	padding-top:30%;
+	font-size: 30px;
+	font-family: 'Indie Flower', cursive;
+	z-index: 1000;
+	color:black;
+}
+.stigma h1 small{
+	color: black;
+	font-size:18px;
+}
+.flower_container:hover .stigma{height:37%;width:37%;border-radius:50%;border-width:0px;top:44%;left:45%; z-index:5;}
+.flower_container:hover a p {visibility:visible;}
+.petal{
+	height:30%;
+	width:30%;
+	position:absolute;
+	background-color:orange;	
+	color:#fff;
+	-moz-box-shadow: 2px 2px 6px #6d6b6b;/*FF 3.5+*/
+	-webkit-box-shadow: 2px 2px 6px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=135, Color=#6d6b6b)";/*IE 8*/
+	box-shadow: 2px 2px 6px 2px #6d6b6b;
+	text-align:center;
+	font-size:30px;
+	font-family: 'Prosto One',cursive;
+	line-height:30%;
+	border-radius:50% 50% 4% 50%;/*50% 50% 20% 50%;*/
+	z-index:2;
+	border-width:2px 0px 0px 2px;
+	transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-o-transition: all 1s ease;
+}
+.petal:after {
+  content : "";
+  display: block;
+  position: absolute;
+  border-radius:50% 50% 4% 50%;/*50% 50% 20% 50%;*/
+  top: 0;
+  left: 0;
+  background-image: url(../images/pink.jpg);
+  width: 100%;
+  height: 100%;
+  opacity : 0.4;
+  z-index: -1;
+}
+.petal p {
+	color:#fff;
+	padding-top:50%;
+	font-size:16px;
+}
+.petal a {
+	color:#fff;
+}
+
+
+.flower_container:hover .petal{height:35%;width:35%;}
+.flower_container:hover .petal:hover{height:45%;width:45%;z-index:3;}
+.flower_container:hover a .petal:visited {
+	background-color:pink;
+}
+.num_1{top:30%;left:30%;}
+.flower_container:hover .petal.num_1{top:20%;left:20%;}
+.num_2{top:25%;left:45%;
+transform:rotate(45deg);
+-ms-transform:rotate(45deg);
+-moz-transform:rotate(45deg);
+-webkit-transform:rotate(45deg);
+-o-transform:rotate(45deg);
+}
+.flower_container:hover .petal.num_2{
+/*top:31%;left:54%;
+transform:rotate(93deg);
+-ms-transform:rotate(93deg);
+-moz-transform:rotate(93deg);
+-webkit-transform:rotate(93deg);
+-o-transform:rotate(93deg);/**/
+top:11%;left:45%;
+}
+.num_3{
+top:30%;left:60%;
+transform:rotate(90deg);
+-ms-transform:rotate(90deg);
+-moz-transform:rotate(90deg);
+-webkit-transform:rotate(90deg);
+-o-transform:rotate(90deg);
+}
+.flower_container:hover .petal.num_3{
+top:20%;left:70%;
+}
+.num_4{
+top:45%;left:63%;
+transform:rotate(135deg);
+-ms-transform:rotate(135deg);
+-moz-transform:rotate(135deg);
+-webkit-transform:rotate(135deg);
+-o-transform:rotate(135deg);
+}
+.flower_container:hover .petal.num_4{
+top:45%;left:77%;
+}
+.num_5{
+top:60%;left:60%;
+transform:rotate(180deg);
+-ms-transform:rotate(180deg);
+-moz-transform:rotate(180deg);
+-webkit-transform:rotate(180deg);
+-o-transform:rotate(180deg);
+}
+.flower_container:hover .petal.num_5{
+top:70%;left:70%;
+}
+.num_6{
+top:65%;left:45%;
+transform:rotate(225deg);
+-ms-transform:rotate(225deg);
+-moz-transform:rotate(225deg);
+-webkit-transform:rotate(225deg);
+-o-transform:rotate(225deg);
+}
+.flower_container:hover .petal.num_6{
+top:79%;left:45%;
+}
+.num_7{
+top:60%;left:30%;
+transform:rotate(270deg);
+-ms-transform:rotate(270deg);
+-moz-transform:rotate(270deg);
+-webkit-transform:rotate(270deg);
+-o-transform:rotate(270deg);
+}
+.flower_container:hover .petal.num_7{
+top:70%;left:20%;
+}
+.num_8{
+top:45%;left:27%;
+transform:rotate(315deg);
+-ms-transform:rotate(315deg);
+-moz-transform:rotate(315deg);
+-webkit-transform:rotate(315deg);
+-o-transform:rotate(315deg);
+}
+.flower_container:hover .petal.num_8{
+top:45%;left:13%;
+}
+
+.stem{height:70%;width:50%;position:absolute;top:60%;left:80%;z-index:0;border-radius:100px 0px 0px 100px;border-left: 15px solid #090;z-index:0;
+
+}
+.stem_mask{height:70%;width:67%;position:absolute;top:60%;left:10%;z-index:1;border-radius:0% 80% 80% 0%;background-color:#fff;opacity:1;
+background-image: url(../images/bg.jpg);
+height:155%;top:50%;
+
+}
+.leaf{ border-top: 10px solid #090;position:absolute;height:20%;width:30%;border-radius:100% 100% 100% 100%;z-index:1;}
+.leaf_1{top:115%;left:55%;}
+.leaf_2{top:100%;left:80%;}
+h2.message{font-family:'helvetica';font-size:14px;font-weight:normal;text-align:center;margin-top:20%;}
+
+
+/*  flower updates  */
+.petal{
+transition: all 1s ease-in;
+-moz-transition: all 1s ease-in;
+-webkit-transition: all 1s ease-in;
+-o-transition: all 1s ease-in}
+/*.petal.num_1,.petal.num_3,.petal.num_5,.petal.num_7{background-color:#FF99CC;}*/
+.flower_container:hover .petal.num_1{top:45%;left:13%;/**/transform:rotate(-45deg);-ms-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-o-transform:rotate(-45deg);/**/}
+.flower_container:hover .petal.num_2{top:20%;left:20%;/**/transform:rotate(0deg);-ms-transform:rotate(0deg);-moz-transform:rotate(0deg);-webkit-transform:rotate(0deg);-o-transform:rotate(0deg);/**/}
+.flower_container:hover .petal.num_3{top:11%;left:45%;/**/transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);-o-transform:rotate(45deg);/**/}
+.flower_container:hover .petal.num_4{top:20%;left:70%;/**/transform:rotate(90deg);-ms-transform:rotate(90deg);-moz-transform:rotate(90deg);-webkit-transform:rotate(90deg);-o-transform:rotate(90deg);/**/}
+.flower_container:hover .petal.num_5{top:45%;left:77%;/**/transform:rotate(135deg);-ms-transform:rotate(135deg);-moz-transform:rotate(135deg);-webkit-transform:rotate(135deg);-o-transform:rotate(135deg);/**/}
+.flower_container:hover .petal.num_6{top:70%;left:70%;/**/transform:rotate(180deg);-ms-transform:rotate(180deg);-moz-transform:rotate(180deg);-webkit-transform:rotate(180deg);-o-transform:rotate(180deg);/**/}
+.flower_container:hover .petal.num_7{top:79%;left:45%;/**/transform:rotate(225deg);-ms-transform:rotate(225deg);-moz-transform:rotate(225deg);-webkit-transform:rotate(225deg);-o-transform:rotate(225deg);/**/}
+.flower_container:hover .petal.num_8{top:70%;left:20%;/**/transform:rotate(270deg);-ms-transform:rotate(270deg);-moz-transform:rotate(270deg);-webkit-transform:rotate(270deg);-o-transform:rotate(270deg);/**/}
