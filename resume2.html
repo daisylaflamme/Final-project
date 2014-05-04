@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><!--<![endif]-->
+<head><meta charset="utf-8">
+<!--[if lt IE 9]>
+        <script>
+            document.createElement('header');
+            document.createElement('nav');
+            document.createElement('section');
+            document.createElement('article');
+            document.createElement('aside');
+            document.createElement('footer');
+            document.createElement('hgroup');
+        </script>
+ <![endif]-->
+<meta charset="utf-8">
+<meta name="description" content="Daisy LaFlamme Resume">
+<meta name="keywords" content="resume, university, experiance, web design, graphic design, user experiance, user interface, small budget projects, freelancer, front-end designer, web developer">
+<meta name="robots" content="index,follow"/>
+<!-- mobil device instructions -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Prosto+One' rel='stylesheet' type='text/css'>
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script src="js/respond.js"></script>
+<title>Resume Experiance Schools</title>
+<link rel="shortcut icon" href="images/desi.ico">
+<link rel="stylesheet" href="styles/main-4.css">
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<!-- Linkedin API -->
+<script type="text/javascript" src="http://platform.linkedin.com/in.js">
+  api_key: 773sp6k8rf2bmg
+  authorize: true
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.5b1.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>  
+
+<script type="text/javascript">
+function getID() {
+   IN.API.Profile("me")
+   .result(function(result) { 
+      $("#profile").html('<script type="IN/FullMemberProfile" data-id="' + result.values[0].id + '"></script>');
+      IN.parse(document.getElementById("profile"))
+   })
+}
+
+</script>
+<!-- Google Analytics API -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48002628-1', 'daisylaflamme.net');
+  ga('send', 'pageview');
+</script>
+</head>
+
+<body>
+  <div class="row">
+    <div class="col-lg-6">
+    	<nav class="flower_container">
+        <a href="index-3.html"><div class="stigma"><h1>Daisy LaFlamme<br><small>Web Designer</small></h1></div></a>
+        <a href="resume.html"><div class="petal num_1 curent"><p>Resume</p></div></a>
+        <a href="ws.html"><div class="petal num_2"><p>Web Design</p></div></a>
+        <a href="projects.html"><div class="petal num_3"><p>Projects</p></div></a>
+        <a href="art.html"><div class="petal num_4"><p>Graphic Design</p></div></a>
+        <a href="dashboards.html"><div class="petal num_5"><p>Dashboards</p></div></a>
+        <a href="#"><div class="petal num_6"><p>My Lab</p></div></a>
+        <a href="certificates.html"><div class="petal num_7"><p>Certificates</p></div></a>
+        <a href="contact.php"><div class="petal num_8"><p>Contact</p></div></a>
+        <div class="stem"></div>
+        <!--<div class="stem_mask"></div>-->
+        <div class="leaf leaf_1"></div>
+        <div class="leaf leaf_2"></div>
+      </nav> 
+    </div>
+  </div>
+
+  <div class="col-lg-12">
+    <div id="profile"></div>
+    <script type="IN/Login" data-onAuth="getID"></script>
+    <script type="IN/Login">
+      Hello, <?js= firstName ?> <?js= lastName ?>.
+    </script>
+  </div>
+
+	<!--<section>
+		<h1>Resume</h1>
+		<article>
+		<h4>August 18, 2013</h4><br>			
+		 <h2>OBJECTIVE</h2><br>
+			<p>Seeking job opportunities in the Web/Graphic/UI/UX Design field where I can talk the talk and walk the walk</p><br>
+			
+        <h2>EXPERIANCE</h2><br>
+        <p>
+          <span class="red">Web/Graphic Designer and Publisher</span> | June 2013 – present<br>UMass Boston - ODAI/College Miner, Boston, MA 02119 </p><br>
+        <p>
+          <span class="red">Web Designer, Freelancer</span> | September 2008 – present </p>
+        <ul>
+          <li>Content Management Systems, XHTML, CSS, JavaScript, Wordpress, Joomla, Dreamweaver,  Photoshop, Illustrator, Project Management, Photography, UX, UI, Mockups, Wire  Frames;</li>
+          <li>Website Development – front and back end;</li>
+          <li>Creating company identity logos, banners, Website navigation buttons,  digital images;</li>
+          <li>UX and UI evaluation;</li>
+          <li>Managing due date driven projects, and team work;</li>
+          <li>Editing HTML documents, java scripts, and Website content;</li>
+          <li>Working with Content Management Systems;</li>
+          <li>Wordpress template editing;</li>
+          <li>Working with customers;</li>
+          <li>Developing flash animations and banners.</li>
+        </ul>
+        <p>&nbsp;	 </p>
+        <p>
+          <span class="red">UI/UX Designer Intern</span> | April 2013 – present<br>ClariLegal, Boston, MA 02119 </p>
+          <ul>
+          <li>UX/UI for eDiscovery Web application;</li>
+          <li>Creating mockup;</li>
+          <li>Issue tracking;</li>
+          <li>Roadmap edits;</li>
+          <li>Marketing tools research;</li>
+          <li>Documenting business domain requirements;</li>
+          <li>Writing user guide;</li>
+          <li>PowerPoint presentations;</li>
+          <li>Demos, meetings, UX testing.</li>
+          </ul>
+        <p>&nbsp;</p>
+        <p>
+          <span class="red">Multimedia Intern</span> | June 2012 – February 2013<br>Global Peace Aid, Inc., Boston, MA 02119 </p>
+        <ul>
+          <li>XHTML, CSS, HTML5, CSS3, JavaScript, jQuery, Photoshop, Dreamweaver,  Project Management, Photography, Social Media Management, Google Analytics,  FTP, Web Hosting;</li>
+          <li>Front-end web site development and maintenance;</li>
+          <li>Logo development;</li>
+          <li>Creating and managing graphics, banners, and images;</li>
+          <li>User Experience and Interface evaluation;</li>
+          <li>Office Networking – computer and printers;</li>
+          <li>Working with PayPal and Google APIs;</li>
+          <li>Website server hosting and maintenance;</li>
+          <li>Working with JavaScript and jQuery Libraries;</li>
+          <li>Taking Pictures and editing with Photoshop;</li>
+          <li>Website evaluation and reporting every month;</li>
+          <li>Social Media marketing;</li>
+          <li>Flyer template development.</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>
+          <span class="red">Customer Service</span> | May 2006 – March 2010 <br>Mobil, West Yarmouth, MA 02673</p>
+        <p>Avon, Cape Cod, MA 02646<br>
+        Sales Representative | April 2007 – October 2009
+        </p><br>
+       
+        <p>
+          <span class="red">IT Assistant/Photoshop</span> | July 2003 – September 2005 (seasonal)<br>ET Menora, Dobrich, Bulgaria 9300</p>
+        <ul>
+          <li>Installing and maintenance of PC software and hardware;</li>
+          <li>Taking pictures of products and editing them with Photoshop.        </li>
+        </ul>
+           <p>&nbsp; </p>
+        
+        
+      
+        <p>
+          <span class="red">Injury Prevention Volunteer</span> | June 2001 – August 2001<br> Red Cross, Dobrich, Bulgaria 9300</p> <br>
+          <h2>EDUCATION</h2><br>
+            <p><span class="dark">Harvard Universiry Extension School</span> (2013-present). In December 2015 I will graduate with	 			Master's Degree in the Digital Media and Instructional Design program.</p>	
+			<p><span class="dark">University of Massachusetts Boston</span> (2010-2013). Bachelor Degree in the Information 		            Technology/Architecture program.</p>	
+            <p><span class="dark">Cape Cod Community College</span> (2008-2010)<br>
+		    Associate Degree in the  Information Technology program.</p>			
+            <p><span class="dark">Technical University Sofia, Bulgaria</span> (2002-2005). Major of study Automatic, Information             and Controlling Technology - Bioelectric Technology</p>
+            <br>
+<h2>PERSONAL QUALITIES</h2><br>
+<p>Self-motivated  |  Deadline-driven  |  Excellent communication skills  |  Detail-oriented  |   Organized   |   Team player  |  Innovative  |  Creative  |  Flexible  |  Responsible   |   Energetic   |   Problem Solver</p><br>
+<h2>LINKS TO MY WEB AND GRAPHIC ART WORK</h2> <br> 
+<ul><li><a href="ws.html">Web Design</a></li>
+<li><a href="art.html">Graphic Design</a></li>
+</ul><br>
+<h2>ACTIVITIES & INTERESTS</h2><br>
+<p>Drawing  |   Painting  |  Yoga   |  Nail Design  |   Baking  |  Swimming   |  Basketball  |   Biking</p>
+<br>   
+	  </article>
+	</section>
+	<aside> 
+	  <h1>
+   	  Download </h1>
+   	  <ul>
+   	<li>  <a href="resume.pdf" target="_blank">Resume PDF</a></li>
+   	 <li> <a href="ProjectList.pdf" target="_blank">Project List PDF</a></li>
+   	  <li><a href="references.pdf" target="_blank">References PDF</a></li></ul>
+   	 
+	  <h1>My Skills</h1>
+        <br>
+		<ul>
+            <li>HTML5</li>
+            <li>XHTML</li>
+            <li>HTML4</li>
+            <li>CSS3</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Ajax</li>
+            <li>jQuery</li>
+            <li>Graphic Design</li>
+            <li>API</li>
+            <li>Dreamweaver</li>
+            <li>Photoshop</li>
+            <li>Illustrator</li>
+            <li>InDesign</li>
+            <li>CMS</li>
+            <li>Wordpress</li>
+            <li>Joomla</li>
+            <li>Drupal</li>
+            <li>Wiki CMS</li>
+            <li>Moodle</li>
+            <li>Wix</li>
+            <li>Social Networks</li>
+            <li>PHP</li>
+            <li>MySql</li>
+            <li>LAMP</li>
+            <li>Google Analytics</li>
+            <li>MS Windows OS</li>
+            <li>MAC OS</li>
+            <li>Linux/Unix</li>
+            <li>MS Project</li>
+            <li>MS Dynamic ERP</li>
+            <li>MS Office</li>
+            <li>KPI Dashboards</li>
+            <li>Tableau</li>
+            <li>Cognos</li>
+            <li>Pivot Tables</li>
+            <li>Power Pivot</li>
+            <li>Git</li>
+            <li>OpenERP</li>
+            <li>Putty</li>
+            <li>Filezilla</li>
+            <li>FTP Core</li>
+            <li>LabView</li>
+            <li>C</li>
+        </ul><br>
+        <h1>My Schools</h1>
+        <h2><a href="http://www.extension.harvard.edu/" target="_blank">Harvard University<br>Extension School</a><br>2012 - 2013</h2>
+        <a target="_blank" href="http://www.extension.harvard.edu/"><img src="images/harvard.gif" alt="link to Harvard Extension website"></a>
+	  <h2><a href="http://www.umb.edu/" target="_blank">UMass Boston</a><br>2010 - 2012</h2>
+      <a target="_blank" href="http://www.umb.edu/"><img src="images/umass.gif" alt="link to UMass Boston website"></a>
+	  <h2><a href="http://www.capecod.edu/web/guest/welcome" target="_blank">Cape Cod Community College</a><br>2008 - 2010</h2>
+      <a target="_blank" href="http://www.capecod.edu/web/guest/welcome"><img src="images/cccc.gif" alt="link to Cape Cod Community College website"></a>
+	  <h2><a href="http://www.tu-sofia.bg/eng_new/index.html" target="_blank">Technical University -<br>Sofia</a><br>2002 - 2006</h2>
+      <a target="_blank" href="http://www.tu-sofia.bg/eng_new/index.html"><img src="images/ty.gif" alt="link to Technical University Sofia website"></a>
+	</aside>
+    <nav>
+    	<ul>
+    		<li><a  href="index.html">Home</a></li>
+            <li><a class="current" href="resume.html">Resume</a></li>
+    		<li><a href="ws.html">Web Design</a></li>
+            <li><a href="art.html">Graphic Design</a></li>
+            <li><a href="projects.html">Projects</a></li>
+    		<li><a href="certificates.html">Certificates</a></li>
+            <li><a href="contact.php">Contact</a></li>
+    	</ul>
+    
+    </nav>
+	<div class="daisyta"></div>-->
+  <div class="row"> 
+    <div class="col-lg-4">
+      <footer>
+           <a href="mailto:daisy@daisylaflamme.net"><img src="images/e.gif" alt="Email"></a>
+            <a target="_blank" href = "http://daisylaflamme.com/wordpress1/"><img src="images/w.gif" alt="Wordpress Blog"></a>
+            <a target="_blank" href = "http://www.youtube.com/watch?v=cpE4PLeVico"><img src="images/y.gif" alt="YouTube Website Presintation"></a>
+            <a target="_blank" href = "http://www.facebook.com/desi.pink.5"><img src="images/f.gif" alt="Facebook Profile"></a>
+            <a target="_blank" href = "https://twitter.com/DesiPink"><img src="images/t.gif" alt="Twitter Profile"></a>
+            <a target="_blank" href = "https://github.com/daisylaflamme"><img src="images/github.gif" alt="Github Account"></a>  
+            <a target="_blank" href = "http://www.linkedin.com/in/desislavalaflamme"><img src="images/in.gif" alt="LinkedIn Profile"></a>  
+            <p><small>
+            <script type="text/javascript" >
+                var today = new Date();
+                document.write( "&copy;&nbsp;" );
+                document.write( today.getFullYear() );
+                document.write( ", Daisy LaFlamme, Boston, MA" )
+            </script><br>
+            <a href="mailto:daisy@daisylaflamme.net">daisy@daisylaflamme.net</a>
+          </small></p>           
+      </footer>
+    </div>
+  </div> 
+    <!-- javascript -->
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  
+</body>
+</html>
