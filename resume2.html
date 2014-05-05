@@ -37,19 +37,26 @@
   api_key: 773sp6k8rf2bmg
   authorize: true
 </script>
+<script src="https://www.linkedin.com/uas/js/userspace?v=0.0.2000-RC8.34724-1412&amp;apiKey=773sp6k8rf2bmg&amp;authorize=true&amp;"></script>
+<script type="text/javascript" src="http://platform.linkedin.com/js/framework?v=0.0.2000-RC8.34724-1412&amp;lang=undefined"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.5b1.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>  
 
 <script type="text/javascript">
-function getID() {
-   IN.API.Profile("me")
-   .result(function(result) { 
-      $("#profile").html('<script type="IN/FullMemberProfile" data-id="' + result.values[0].id + '"></script>');
-      IN.parse(document.getElementById("profile"))
-   })
-}
-
+  function loadData() {
+    IN.API.Profile("me")
+      .fields(["id", "firstName", "lastName", "pictureUrl","headline","publicProfileUrl"])
+      .result(function(result) {
+        profile = result.values[0];
+        profHTML = "<p><a href=\"" + profile.publicProfileUrl + "\">";
+        profHTML += "<img class=img_border align=\"left\" src=\"" + profile.pictureUrl + "\"></a>";      
+        profHTML += "<a href=\"" + profile.publicProfileUrl + "\">";
+        profHTML += "<h2 class=myname>" + profile.firstName + " " + profile.lastName + "</a> </h2>";
+        profHTML += "<span class=myheadline>" + profile.headline + "</span>";
+        $("#profile").html(profHTML);
+      });
+  }
 </script>
 <!-- Google Analytics API -->
 <script>
@@ -87,183 +94,11 @@ function getID() {
   <div class="col-lg-12">
     <div id="profile"></div>
     <script type="IN/Login" data-onAuth="getID"></script>
-    <script type="IN/Login">
       Hello, <?js= firstName ?> <?js= lastName ?>.
     </script>
+    <script type="IN/Login+init" data-onauth="loadData"></script>
   </div>
 
-	<!--<section>
-		<h1>Resume</h1>
-		<article>
-		<h4>August 18, 2013</h4><br>			
-		 <h2>OBJECTIVE</h2><br>
-			<p>Seeking job opportunities in the Web/Graphic/UI/UX Design field where I can talk the talk and walk the walk</p><br>
-			
-        <h2>EXPERIANCE</h2><br>
-        <p>
-          <span class="red">Web/Graphic Designer and Publisher</span> | June 2013 – present<br>UMass Boston - ODAI/College Miner, Boston, MA 02119 </p><br>
-        <p>
-          <span class="red">Web Designer, Freelancer</span> | September 2008 – present </p>
-        <ul>
-          <li>Content Management Systems, XHTML, CSS, JavaScript, Wordpress, Joomla, Dreamweaver,  Photoshop, Illustrator, Project Management, Photography, UX, UI, Mockups, Wire  Frames;</li>
-          <li>Website Development – front and back end;</li>
-          <li>Creating company identity logos, banners, Website navigation buttons,  digital images;</li>
-          <li>UX and UI evaluation;</li>
-          <li>Managing due date driven projects, and team work;</li>
-          <li>Editing HTML documents, java scripts, and Website content;</li>
-          <li>Working with Content Management Systems;</li>
-          <li>Wordpress template editing;</li>
-          <li>Working with customers;</li>
-          <li>Developing flash animations and banners.</li>
-        </ul>
-        <p>&nbsp;	 </p>
-        <p>
-          <span class="red">UI/UX Designer Intern</span> | April 2013 – present<br>ClariLegal, Boston, MA 02119 </p>
-          <ul>
-          <li>UX/UI for eDiscovery Web application;</li>
-          <li>Creating mockup;</li>
-          <li>Issue tracking;</li>
-          <li>Roadmap edits;</li>
-          <li>Marketing tools research;</li>
-          <li>Documenting business domain requirements;</li>
-          <li>Writing user guide;</li>
-          <li>PowerPoint presentations;</li>
-          <li>Demos, meetings, UX testing.</li>
-          </ul>
-        <p>&nbsp;</p>
-        <p>
-          <span class="red">Multimedia Intern</span> | June 2012 – February 2013<br>Global Peace Aid, Inc., Boston, MA 02119 </p>
-        <ul>
-          <li>XHTML, CSS, HTML5, CSS3, JavaScript, jQuery, Photoshop, Dreamweaver,  Project Management, Photography, Social Media Management, Google Analytics,  FTP, Web Hosting;</li>
-          <li>Front-end web site development and maintenance;</li>
-          <li>Logo development;</li>
-          <li>Creating and managing graphics, banners, and images;</li>
-          <li>User Experience and Interface evaluation;</li>
-          <li>Office Networking – computer and printers;</li>
-          <li>Working with PayPal and Google APIs;</li>
-          <li>Website server hosting and maintenance;</li>
-          <li>Working with JavaScript and jQuery Libraries;</li>
-          <li>Taking Pictures and editing with Photoshop;</li>
-          <li>Website evaluation and reporting every month;</li>
-          <li>Social Media marketing;</li>
-          <li>Flyer template development.</li>
-        </ul>
-        <p>&nbsp;</p>
-        <p>
-          <span class="red">Customer Service</span> | May 2006 – March 2010 <br>Mobil, West Yarmouth, MA 02673</p>
-        <p>Avon, Cape Cod, MA 02646<br>
-        Sales Representative | April 2007 – October 2009
-        </p><br>
-       
-        <p>
-          <span class="red">IT Assistant/Photoshop</span> | July 2003 – September 2005 (seasonal)<br>ET Menora, Dobrich, Bulgaria 9300</p>
-        <ul>
-          <li>Installing and maintenance of PC software and hardware;</li>
-          <li>Taking pictures of products and editing them with Photoshop.        </li>
-        </ul>
-           <p>&nbsp; </p>
-        
-        
-      
-        <p>
-          <span class="red">Injury Prevention Volunteer</span> | June 2001 – August 2001<br> Red Cross, Dobrich, Bulgaria 9300</p> <br>
-          <h2>EDUCATION</h2><br>
-            <p><span class="dark">Harvard Universiry Extension School</span> (2013-present). In December 2015 I will graduate with	 			Master's Degree in the Digital Media and Instructional Design program.</p>	
-			<p><span class="dark">University of Massachusetts Boston</span> (2010-2013). Bachelor Degree in the Information 		            Technology/Architecture program.</p>	
-            <p><span class="dark">Cape Cod Community College</span> (2008-2010)<br>
-		    Associate Degree in the  Information Technology program.</p>			
-            <p><span class="dark">Technical University Sofia, Bulgaria</span> (2002-2005). Major of study Automatic, Information             and Controlling Technology - Bioelectric Technology</p>
-            <br>
-<h2>PERSONAL QUALITIES</h2><br>
-<p>Self-motivated  |  Deadline-driven  |  Excellent communication skills  |  Detail-oriented  |   Organized   |   Team player  |  Innovative  |  Creative  |  Flexible  |  Responsible   |   Energetic   |   Problem Solver</p><br>
-<h2>LINKS TO MY WEB AND GRAPHIC ART WORK</h2> <br> 
-<ul><li><a href="ws.html">Web Design</a></li>
-<li><a href="art.html">Graphic Design</a></li>
-</ul><br>
-<h2>ACTIVITIES & INTERESTS</h2><br>
-<p>Drawing  |   Painting  |  Yoga   |  Nail Design  |   Baking  |  Swimming   |  Basketball  |   Biking</p>
-<br>   
-	  </article>
-	</section>
-	<aside> 
-	  <h1>
-   	  Download </h1>
-   	  <ul>
-   	<li>  <a href="resume.pdf" target="_blank">Resume PDF</a></li>
-   	 <li> <a href="ProjectList.pdf" target="_blank">Project List PDF</a></li>
-   	  <li><a href="references.pdf" target="_blank">References PDF</a></li></ul>
-   	 
-	  <h1>My Skills</h1>
-        <br>
-		<ul>
-            <li>HTML5</li>
-            <li>XHTML</li>
-            <li>HTML4</li>
-            <li>CSS3</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Ajax</li>
-            <li>jQuery</li>
-            <li>Graphic Design</li>
-            <li>API</li>
-            <li>Dreamweaver</li>
-            <li>Photoshop</li>
-            <li>Illustrator</li>
-            <li>InDesign</li>
-            <li>CMS</li>
-            <li>Wordpress</li>
-            <li>Joomla</li>
-            <li>Drupal</li>
-            <li>Wiki CMS</li>
-            <li>Moodle</li>
-            <li>Wix</li>
-            <li>Social Networks</li>
-            <li>PHP</li>
-            <li>MySql</li>
-            <li>LAMP</li>
-            <li>Google Analytics</li>
-            <li>MS Windows OS</li>
-            <li>MAC OS</li>
-            <li>Linux/Unix</li>
-            <li>MS Project</li>
-            <li>MS Dynamic ERP</li>
-            <li>MS Office</li>
-            <li>KPI Dashboards</li>
-            <li>Tableau</li>
-            <li>Cognos</li>
-            <li>Pivot Tables</li>
-            <li>Power Pivot</li>
-            <li>Git</li>
-            <li>OpenERP</li>
-            <li>Putty</li>
-            <li>Filezilla</li>
-            <li>FTP Core</li>
-            <li>LabView</li>
-            <li>C</li>
-        </ul><br>
-        <h1>My Schools</h1>
-        <h2><a href="http://www.extension.harvard.edu/" target="_blank">Harvard University<br>Extension School</a><br>2012 - 2013</h2>
-        <a target="_blank" href="http://www.extension.harvard.edu/"><img src="images/harvard.gif" alt="link to Harvard Extension website"></a>
-	  <h2><a href="http://www.umb.edu/" target="_blank">UMass Boston</a><br>2010 - 2012</h2>
-      <a target="_blank" href="http://www.umb.edu/"><img src="images/umass.gif" alt="link to UMass Boston website"></a>
-	  <h2><a href="http://www.capecod.edu/web/guest/welcome" target="_blank">Cape Cod Community College</a><br>2008 - 2010</h2>
-      <a target="_blank" href="http://www.capecod.edu/web/guest/welcome"><img src="images/cccc.gif" alt="link to Cape Cod Community College website"></a>
-	  <h2><a href="http://www.tu-sofia.bg/eng_new/index.html" target="_blank">Technical University -<br>Sofia</a><br>2002 - 2006</h2>
-      <a target="_blank" href="http://www.tu-sofia.bg/eng_new/index.html"><img src="images/ty.gif" alt="link to Technical University Sofia website"></a>
-	</aside>
-    <nav>
-    	<ul>
-    		<li><a  href="index.html">Home</a></li>
-            <li><a class="current" href="resume.html">Resume</a></li>
-    		<li><a href="ws.html">Web Design</a></li>
-            <li><a href="art.html">Graphic Design</a></li>
-            <li><a href="projects.html">Projects</a></li>
-    		<li><a href="certificates.html">Certificates</a></li>
-            <li><a href="contact.php">Contact</a></li>
-    	</ul>
-    
-    </nav>
-	<div class="daisyta"></div>-->
   <div class="row"> 
     <div class="col-lg-4">
       <footer>
