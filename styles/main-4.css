@@ -14,25 +14,18 @@ html {
 	
 }
 body {
-	font-family: Comic Sans MS, Helvetica, sans-serif;
+	font-family: 'Prosto One',cursive;
 	height:100%;
-	/*
-	font-size: 87.5%;
-	width: 80%;
-	margin: 20px auto !important;
-	border: 0px solid #CCCCCC;
-	border-radius:14px;
-	-moz-box-shadow: 1px 4px 30px #6d6b6b;
-	-webkit-box-shadow: 1px 4px 30px #6d6b6b;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=30, Direction=166, Color=#6d6b6b)";
-	box-shadow: 1px 4px 30px #6d6b6b;
-	*/
+	/*	
 	background-image: url(../images/bg.jpg);
 	background-position: top right;
 	background-repeat: no-repeat;
-	
+	*/
 }
-
+.top-space{
+	margin-top:30px;
+	margin-left:20px;
+}
 a:focus, a:hover {
 	font-style: italic;
 }
@@ -50,6 +43,9 @@ a:visited { color:#060;
 nav {
 	clear: both;
 }	
+h1{
+	color:#090;
+}
 
 /* the styles for the section */
 section {
@@ -58,15 +54,19 @@ section {
 	width: 78%;
 	float: left;
 }
-section iframe{	
-	margin-right: 2px;
+div.project iframe{	
+	margin-right: 20px;
 	width:427px;
 	 height:356px;
 	 border:1px solid #CCC;
 	 border-width:1px 1px 0;
 	 margin-bottom:5px;	
 }
-section a:hover {
+div.project h1{
+	font-size:18px;
+
+}
+a img:hover {
 		opacity:0.5;
 	}
 section div.ad {
@@ -91,10 +91,10 @@ section div.upto {
 	color: #0C717A;	
 	
 	-moz-box-shadow: 0px 4px 50px #6d6b6b;/*FF 3.5+*/
--webkit-box-shadow: 0px 4px 50px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
--ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=180, Color=#6d6b6b)";/*IE 8*/
-box-shadow: 0px 4px 50px #6d6b6b;
-filter: progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=180, Color=#6d6b6b);/*IE 5.5-7*/
+	-webkit-box-shadow: 0px 4px 50px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=180, Color=#6d6b6b)";/*IE 8*/
+	box-shadow: 0px 4px 50px #6d6b6b;
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=180, Color=#6d6b6b);/*IE 5.5-7*/
 }
 section div.upto p{
 	font-family: "Comic Sans MS", cursive, "Old English Text MT";
@@ -161,7 +161,7 @@ section h5{
 	color: #800;
 	padding-top:2%;
 	}
-section div.project{
+div.project{
 	float:left;
 	margin: .5em .5em;	
 }
@@ -194,9 +194,9 @@ section a img.kpi {
 	box-shadow: 4px 1px 8px #6d6b6b;
 			
 }
-section a.fancybox img {
+a.fancybox img {
 	
-	margin:8px;
+	margin:20px;
 	-moz-box-shadow: 4px 1px 8px #6d6b6b;/*FF 3.5+*/
 	-webkit-box-shadow: 4px 1px 8px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
 	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=104, Color=#6d6b6b)";/*IE 8*/
@@ -210,8 +210,8 @@ section blockquote {
 	font-style: italic;
 }
 
-section ul  {
-	padding: 0 0 1.5em 1.25em;
+ul  {
+	padding: 0 0 1.5em 3em;
 	
     padding-bottom: 0.25em;
 }
@@ -267,9 +267,9 @@ article h1 {
 	
 }
 article h2 {
-	color: black;
-	background-image: url(../images/ws.gif);
+	color: #090;
 	background-repeat: repeat-x;
+	font-size:140%;
 }
 section div.resume img {
 	float: right;
@@ -332,11 +332,11 @@ footer p {
 	margin-left:2em;	
 	clear:both;
 	float: left;
-	color:white;
+	color:green;
 
 }
 footer a {
-	color:white;
+	color:green;
 
 }
 footer a img {

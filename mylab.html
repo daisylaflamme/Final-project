@@ -37,13 +37,29 @@
 <link rel="stylesheet" href="styles/main-4.css">
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<!-- Linkedin API -->
+<!-- 1. Include the LinkedIn JavaScript API and define a onLoad callback function -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.5b1.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>  
-
 <script type="text/javascript" src="http://platform.linkedin.com/in.js">
   api_key: 773sp6k8rf2bmg
-  onLoad:  Linkedin.init
+  onLoad: onLinkedInLoad
+  authorize: true
+</script>
+<script type="text/javascript">
+
+  function onLinkedInLoad() {
+    IN.Event.on(IN, "auth", onLinkedInAuth);
+  }
+
+  function onLinkedInAuth() {
+    IN.API.Profile("me").result(displayProfiles);
+  }
+
+  function displayProfiles(profiles) {
+    member = profiles.values[0];
+    document.getElementById("profiles").innerHTML = 
+      "<p id=\"" + member.id + "\">Hello " +  member.firstName + " " + member.lastName + "</p>";
+  }
 </script>
 
 <!-- Google Analytics API -->
@@ -60,7 +76,7 @@
 
 <body>
   <div class="row">
-    <div class="col-lg-6">
+    <div class="col-lg-3">
       <nav class="flower_container">
         <a href="index-3.html"><div class="stigma"><h1>Daisy LaFlamme<br><small>Web Designer</small></h1></div></a>
         <a href="resume.html"><div class="petal num_1 curent"><p>Resume</p></div></a>
@@ -68,7 +84,7 @@
         <a href="projects.html"><div class="petal num_3"><p>Projects</p></div></a>
         <a href="art.html"><div class="petal num_4"><p>Graphic Design</p></div></a>
         <a href="dashboards.html"><div class="petal num_5"><p>Dashboards</p></div></a>
-        <a href="#"><div class="petal num_6"><p>My Lab</p></div></a>
+        <a href="mylab.html"><div class="petal num_6"><p>My Lab</p></div></a>
         <a href="certificates.html"><div class="petal num_7"><p>Certificates</p></div></a>
         <a href="contact.php"><div class="petal num_8"><p>Contact</p></div></a>
         <div class="stem"></div>
@@ -77,89 +93,25 @@
         <div class="leaf leaf_2"></div>
       </nav> 
     </div>
+
+    <div class="col-lg-9">
+      
+      <h2>Linkedin API</h2>
+      <script type="IN/Login"></script>
+      <div id="profiles"></div>
+      
+      <h2>Linkedin profile hover plugin</h2>
+      <script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/desislavalaflamme" data-format="hover"></script>
+      
+      <h2>Linkedin profile inline plugin</h2>
+      <script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/desislavalaflamme" data-related="false" data-format="inline"></script>
+      
+      <h2>Full member profile</h2>
+      <p>Here I use the linkedin API to pull out my full profile as a widget</p>
+      <script type="IN/FullMemberProfile" data-id="qPhu7yshYb" data-firstName="Desislava Daisy" data-lastName="LaFlamme"></script>
+    </div>
   </div>
-
-  <div class="col-lg-12">
-    <p>This example demonstrates the use of a login button to control what's displayed.  It also demonstrates how to use the LinkedIn auth events in a user flow.</p>
-
-
-<script type="text/javascript">
-(function($){
-    var $MessageList = $('#js-messages');
-
-    function message(p_sMessage){
-        $MessageList.append($('<li>' + p_sMessage + '</li>'));
-    }
-    
-    window.Linkedin = {
-        init : function(){
-            message('The Linkedin JS has loaded.');
-            message('You can now login.');
-            
-            $('.IN-widget').bind('click', function(){
-                message('You just clicked the Login Button');
-            });
-        }
-        , onAuthCallback : function(){
-            message('You just logged in.');
-            message('Will retrieve your info.');
-        }
-        , onLogoutCallback : function(){
-            message('You just logged out.');
-        }
-        , userData : function(p_oUserInfo){
-            message('Your user data was received:');
-            message(''
-                    + ' <img src="' + p_oUserInfo.pictureUrl + '" \/>'
-                    + p_oUserInfo.firstName + ' ' + p_oUserInfo.lastName
-                    + ' -- ' + p_oUserInfo.headline
-                    + ' (' + p_oUserInfo.id + ')'
-                   );
-        }
-    };    
-}(jQuery));
-</script>
-
-<div class="page">
-    <h1>daisy JS API Example</h1>
-
-    <ul id="js-messages">
-        <li>Messages from our code will appear here.</li>
-    </ul>
-</div>
-
-    <!-- The following displays a Linkedin Login button
-     The callback in data-onAuth will be called when the user is logged in
-       The callback in data-onLogout will be called when the user logs out 
-      -->
-    <script type="IN/Login"
-            data-onAuth="Linkedin.onAuthCallback"
-            data-onLogout="Linkedin.onLogoutCallback"
-    >
-        <!-- This is just  a simple trick to pass the user's data to our script
-       without having to do another API call.
-      -->
-        <img src="http://dummyimage.com/1x1/F.gif" onload="
-        Linkedin.userData({
-              id        : '<?js= id ?>'
-            , firstName : '<?js= firstName ?>'
-            , lastName  : '<?js= lastName ?>'
-            , headline  : '<?js= headline ?>'
-            , pictureUrl: '<?js= pictureUrl ?>'
-        });
-        " />
-    </script>
-<script type="text/javascript" src="http://platform.linkedin.com/in.js">
-  api_key: 773sp6k8rf2bmg
-  onLoad:  Linkedin.init
-</script>
-
-
-<script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/desislavalaflamme" data-format="hover"></script>
-<script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/reidhoffman" data-related="false" data-format="inline"></script>
-<p>Full Member Profile</p>
-<script type="IN/FullMemberProfile" data-id="Hv3V1lv4SQ" data-firstName="Eugene" data-lastName="O'Neill"></script>
-
+  <hr>
   <div class="row"> 
     <div class="col-lg-4">
       <footer>
