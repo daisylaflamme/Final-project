@@ -33,6 +33,12 @@ body {
 	*/
 }
 
+header h1{
+	position:absolute;
+}
+header h2{
+	position:absolute;
+}
 a:focus, a:hover {
 	font-style: italic;
 }
@@ -105,17 +111,17 @@ div.daisyta {
 	visibility:hidden;
 }
 .stigma{background-color:#FFFF99;border:0px solid #dd0;height:30%;width:35%;border-radius:50%;position:absolute;top:45%;left:45%;z-index:2;
-transition: all 1s ease;
--moz-transition: all 1s ease;
--webkit-transition: all 1s ease;
--o-transition: all 1s ease;
+	transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-o-transition: all 1s ease;
 
-height:35%;width:35%;border-radius:50%;border-width:5%;top:45%;left:45%;
--moz-box-shadow: 2px 2px 6px #6d6b6b;/*FF 3.5+*/
--webkit-box-shadow: 2px 2px 6px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
--ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=135, Color=#6d6b6b)";/*IE 8*/
-box-shadow: 2px 2px 6px #6d6b6b;
-text-align: center;
+	height:35%;width:35%;border-radius:50%;border-width:5%;top:45%;left:45%;
+	-moz-box-shadow: 2px 2px 6px #6d6b6b;/*FF 3.5+*/
+	-webkit-box-shadow: 2px 2px 6px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=135, Color=#6d6b6b)";/*IE 8*/
+	box-shadow: 2px 2px 6px #6d6b6b;
+	text-align: center;
 }
 
 .stigma:after {
@@ -142,7 +148,12 @@ text-align: center;
 	color: black;
 	font-size:18px;
 }
-.flower_container:hover .stigma{height:37%;width:37%;border-radius:50%;border-width:0px;top:44%;left:45%; z-index:5;}
+.flower_container:hover .stigma{height:37%;width:37%;border-radius:50%;border-width:0px;top:44%;left:45%; z-index:5;
+	transition: all 8s ease;
+	-moz-transition: all 8s ease;
+	-webkit-transition: all 8s ease;
+	-o-transition: all 8s ease;
+	}
 .flower_container:hover a p {visibility:visible;}
 .petal{
 	height:30%;

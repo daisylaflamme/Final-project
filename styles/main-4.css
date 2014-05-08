@@ -129,6 +129,9 @@ section div.partners {
 box-shadow: 0px 4px 50px #6d6b6b;
 filter: progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=180, Color=#6d6b6b);/*IE 5.5-7*/
 }
+.dashboards h1{
+	font-size:18px ;
+}
 section div.partners p{
 	font-family: "Comic Sans MS", cursive, "Old English Text MT";
 	font-size: 120%;
@@ -174,11 +177,14 @@ section p img#image {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=104, Color=#6d6b6b)";/*IE 8*/
 	box-shadow: 4px 1px 8px #6d6b6b;		
 }
-section div#accordion div img{
+div#accordion div img{
 	-moz-box-shadow: 4px 1px 8px #6d6b6b;/*FF 3.5+*/
 	-webkit-box-shadow: 4px 1px 8px #6d6b6b;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
 	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=104, Color=#6d6b6b)";/*IE 8*/
 	box-shadow: 4px 1px 8px #6d6b6b;		
+}
+div#accordion {
+	max-width:800px;
 }
 section ul li a img {
 	-moz-box-shadow: 4px 1px 8px #6d6b6b;/*FF 3.5+*/
@@ -193,6 +199,9 @@ section a img.kpi {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=104, Color=#6d6b6b)";/*IE 8*/
 	box-shadow: 4px 1px 8px #6d6b6b;
 			
+}
+form {
+	max-width:500px;
 }
 a.fancybox img {
 	
@@ -212,8 +221,7 @@ section blockquote {
 
 ul  {
 	padding: 0 0 1.5em 3em;
-	
-    padding-bottom: 0.25em;
+	padding-bottom: 0.25em;
 }
 
 
