@@ -39,4 +39,20 @@ Functional specifications:
 * APIs: I want to visualize with processing my comunication/network.
 * Responsive designs
 
+
+Lab questions - May 8:
+
+By the end of tonight, I want to create a linkedin post widget.
+
+
+
+By the end of the next 7 days, I want to:
+- finish my site navigation: create one more navigational flower that will link to my social media accounts;
+- I want to embed Facebook and Tweeter widget on my contact page;
+- rotate the navigation text to look horizontal;
+-to register Linkedin API for all my pages. I want to say: “Hello <user name>” on the top of each page of my website. Users who happen to be logged in to linked in already will be able to see this greeting. For example recruiters have their linked in account launched most of the time. This mean they will be able to see this interactive greeting. 
+
+Will try to fit in the next 7 days:
+If all this takes me less time than the estimated time: I want to create a widget where I can take all my posts from Tweeter, Facebook, Google+, LinkedIn and stack them one after another sorted by timestamp.
+
 ![Illustration of suggested extension #5](./wireframes-april29-2014/home-page.JPG)
