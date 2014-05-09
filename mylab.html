@@ -53,19 +53,35 @@
 
   function onLinkedInAuth() {
     IN.API.Profile("me").result(displayProfiles);
-    function onLinkedInAuth() {
+
     IN.API.Connections("me")
     .fields("firstName", "lastName", "industry")
     .params({"start": 10, "count": 300})
     .result(displayConnections)
     .error(displayConnectionsErrors);
-}
+
+    IN.API.PeopleSearch()
+    .fields("firstName", "lastName", "positions")
+    .params({"title": "Web Designer", "current-title": true})
+    .result(displayPeopleSearch)
+    .error(displayPeopleSearchError);
+
+    IN.API.NetworkUpdates()
+     .params({"type": "SHAR", "count": 20}) // get the five most-recent Shares
+     .result(displayNetworkUpdates)
+     .error(displayNetworkUpdatesError);
+
+    IN.API.MemberUpdates("me","EjDUWNoC3C")
+     .params({"type": "SHAR", "count": 5}) // get the five most-recent Shares for the viewer and EjDUWNoC3C
+     .result(displayNetworkUpdates)
+     .error(displayNetworkUpdatesError);
+
   }
 
   function displayProfiles(profiles) {
     member = profiles.values[0];
     document.getElementById("profiles").innerHTML = 
-      "<p id=\"" + member.id + "\">Hello " +  member.firstName + " " + member.lastName + "</p>";
+      "<p id=\"" + member.id + "\">Hello, " +  member.firstName + " " + member.lastName + ". Here is a list of your connections:</p>";
   }
 
   function displayConnections(connections) {
@@ -75,10 +91,33 @@
   for (var member in members) {
     connectionsDiv.innerHTML += "<p>" + members[member].firstName + " " + members[member].lastName
       + " works in the " + members[member].industry + " industry";
-  }     
-}
+    }     
+  }  
+  function displayConnectionsErrors(error) {  }
+  function displayPeopleSearch(peopleSearch) {
+    var peopleSearchDiv = document.getElementById("peoplesearch");
+       
+    var members = peopleSearch.people.values; 
+    for (var member in members) {
+      peopleSearchDiv.innerHTML += "<p>" + members[member].firstName + " " + members[member].lastName 
+        + " is a " + members[member].positions.values[0].title + ".</p>";
+    }
+  }
 
-function displayConnectionsErrors(error) {  }
+  function displayPeopleSearchError(error) { return console.log("displayPeopleSearchError") }
+
+  function displayNetworkUpdates(updates) {
+  var profileDiv = document.getElementById("networkupdates");
+     
+  for (var i in updates.values) {
+    var key = updates.values[i].updateKey; // each update has a unique key
+    var share = updates.values[i].updateContent.person; // the person sharing content
+    profileDiv.innerHTML += "<p id='" + key + "'>" + share.firstName + " " + share.lastName 
+      + " shared " + share.currentShare.comment + ".</p>";
+    }     
+  }
+  function displayNetworkUpdatesError(error) { return console.log("displayNetworkUpdatesError") }
+
 </script>
 
 <!-- Google Analytics API -->
@@ -115,21 +154,26 @@ function displayConnectionsErrors(error) {  }
 
     <div class="col-lg-9">
       
-      <h2>Linkedin API</h2>
+      <h3>Linkedin API</h3>
       <script type="IN/Login"></script>
       <div id="profiles"></div>
       <div id="connections"></div>
+      <h3>Web Designers around you</h3>
+      <div id="peoplesearch"></div>
+      <h3>Network Updates</h3>
+      <div id="networkupdates"></div>
       
-      <h2>Linkedin profile hover plugin</h2>
+      
+      <h3>Linkedin profile hover plugin</h3>
       <script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/desislavalaflamme" data-format="hover"></script>
       
-      <h2>Linkedin profile inline plugin</h2>
+      <h3>Linkedin profile inline plugin</h3>
       <script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/desislavalaflamme" data-related="false" data-format="inline"></script>
       
-      <h2>Full member profile</h2>
+      <h3>Full member profile</h3>
       <p>Here I use the linkedin API to pull out my full profile as a widget</p>
       <script type="IN/FullMemberProfile" data-id="qPhu7yshYb" data-firstName="Desislava Daisy" data-lastName="LaFlamme"></script>
-      <h2>Simulation of linkedin widget</h2>
+      <h3>Simulation of linkedin widget</h3>
        <a href="www.linkedin.com/in/desislavalaflamme" ><div><iframe src="iframe.html" width="400"></iframe></div></a>
     </div>
   </div>

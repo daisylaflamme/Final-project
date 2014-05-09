@@ -57,5 +57,6 @@ If all this takes me less time than the estimated time: I want to create a widge
 
 =================
 It turns our that linked's architecture does not support public view of network updates for member posts. I did just a mock-up simulation of the widget.
+Blog source: https://developer.linkedin.com/forum/how-show-activity-linkedin-widget-my-website
 
 ![Illustration of suggested extension #5](./wireframes-april29-2014/home-page.JPG)
