@@ -55,4 +55,7 @@ By the end of the next 7 days, I want to:
 Will try to fit in the next 7 days:
 If all this takes me less time than the estimated time: I want to create a widget where I can take all my posts from Tweeter, Facebook, Google+, LinkedIn and stack them one after another sorted by timestamp.
 
+=================
+It turns our that linked's architecture does not support public view of network updates for member posts. I did just a mock-up simulation of the widget.
+
 ![Illustration of suggested extension #5](./wireframes-april29-2014/home-page.JPG)
