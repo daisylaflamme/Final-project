@@ -62,18 +62,18 @@
 
     IN.API.PeopleSearch()
     .fields("firstName", "lastName", "positions")
-    .params({"title": "Web Designer", "current-title": true})
+    .params({"title": "Web Developer", "current-title": true})
     .result(displayPeopleSearch)
     .error(displayPeopleSearchError);
 
     IN.API.NetworkUpdates()
-     .params({"type": "SHAR", "count": 20}) // get the five most-recent Shares
+     .params({"type": "SHAR", "count": 20}) // get the 20 most-recent Shares
      .result(displayNetworkUpdates)
      .error(displayNetworkUpdatesError);
 
-    IN.API.MemberUpdates("me","EjDUWNoC3C")
-     .params({"type": "SHAR", "count": 5}) // get the five most-recent Shares for the viewer and EjDUWNoC3C
-     .result(displayNetworkUpdates)
+    IN.API.MemberUpdates("me","qPhu7yshYb")
+     .params({"type": "SHAR", "count": 20}) // get the 20 most-recent Shares for the viewer and EjDUWNoC3C
+     .result(displayMemberkUpdates)
      .error(displayNetworkUpdatesError);
 
   }
@@ -94,6 +94,7 @@
     }     
   }  
   function displayConnectionsErrors(error) {  }
+
   function displayPeopleSearch(peopleSearch) {
     var peopleSearchDiv = document.getElementById("peoplesearch");
        
@@ -104,7 +105,7 @@
     }
   }
 
-  function displayPeopleSearchError(error) { return console.log("displayPeopleSearchError") }
+  function displayPeopleSearchError(error) { document.getElementById("peoplesearch").innerHTML += "<p>0 in your network</p>" }
 
   function displayNetworkUpdates(updates) {
   var profileDiv = document.getElementById("networkupdates");
@@ -112,12 +113,23 @@
   for (var i in updates.values) {
     var key = updates.values[i].updateKey; // each update has a unique key
     var share = updates.values[i].updateContent.person; // the person sharing content
-    profileDiv.innerHTML += "<p id='" + key + "'>" + share.firstName + " " + share.lastName 
+    profileDiv.innerHTML += "<img src='" + share.pictureUrl + "'><p id='" + key + "'>" + share.firstName + " " + share.lastName 
       + " shared " + share.currentShare.comment + ".</p>";
     }     
   }
   function displayNetworkUpdatesError(error) { return console.log("displayNetworkUpdatesError") }
 
+  function displayMemberUpdates(updates) {
+  var profileDiv = document.getElementById("memberupdates");
+     
+  for (var i in updates.values) {
+    var key = updates.values[i].updateKey; // each update has a unique key
+    var share = updates.values[i].updateContent.person; // the person sharing content
+    profileDiv.innerHTML += "<img src='" + share.pictureUrl + "'><p id='" + key + "'>" + share.firstName + " " + share.lastName 
+      + " shared " + share.currentShare.comment + ".</p>";
+    }     
+  }
+  function displayMemberUpdatesError(error) { return console.log("displayNetworkUpdatesError") }
 </script>
 
 <!-- Google Analytics API -->
@@ -160,6 +172,8 @@
       <div id="connections"></div>
       <h3>Web Designers around you</h3>
       <div id="peoplesearch"></div>
+      <h3>Member Updates</h3>
+      <div id="memberupdates"></div>
       <h3>Network Updates</h3>
       <div id="networkupdates"></div>
       
