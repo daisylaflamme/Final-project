@@ -74,7 +74,7 @@
     IN.API.MemberUpdates("me","qPhu7yshYb")
      .params({"type": "SHAR", "count": 20}) // get the 20 most-recent Shares for the viewer and EjDUWNoC3C
      .result(displayMemberkUpdates)
-     .error(displayNetworkUpdatesError);
+     .error(displayMemberUpdatesError);
 
   }
 
@@ -129,7 +129,7 @@
       + " shared " + share.currentShare.comment + ".</p>";
     }     
   }
-  function displayMemberUpdatesError(error) { return console.log("displayNetworkUpdatesError") }
+  function displayMemberUpdatesError(error) { return console.log("displayMemberUpdatesError") }
 </script>
 
 <!-- Google Analytics API -->

@@ -22,7 +22,7 @@
 <meta name="keywords" content=" contact, bussiness card, send message, daisy laflamme, web design, graphisc design, ui, ux, quincy ma, boston ma">
 <meta name="robots" content="index,follow"/>
 <!-- mobil device instructions -->
-<meta name="viewport" content="width=device-width; initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Prosto+One' rel='stylesheet' type='text/css'>
 <!-- Bootstrap -->
@@ -37,6 +37,57 @@
     <link rel="stylesheet" href="styles/jquery-ui.css" />
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
+<script type="text/javascript" src="http://platform.linkedin.com/in.js">
+  api_key: 773sp6k8rf2bmg
+  onLoad: onLinkedInLoad
+  authorize: true
+</script>
+<script type="text/javascript">
+  var myPublicShare = [];
+
+  window.onload = function () {
+    var myPublicShareDiv = document.getElementById("mypublicshare");
+    myPublicShareDiv.innerHTML += "<p>" + myPublicShare[1] + "</p><br>";
+  }
+
+  function onLinkedInLoad() {
+    IN.Event.on(IN, "auth", onLinkedInAuth);
+  }
+
+  function onLinkedInAuth() {
+    IN.API.Profile("me").result(displayProfiles);
+
+    IN.API.MemberUpdates("me")
+     .params({"type": "SHAR", "count": 20}) // get the 20 most-recent Shares for the viewer and EjDUWNoC3C
+     .result(displayNetworkUpdates)
+     .error(displayNetworkUpdatesError);
+
+  }
+
+  function displayProfiles(profiles) {
+    member = profiles.values[0];
+    document.getElementById("profiles").innerHTML = 
+      "<p id=\"" + member.id + "\">Hello, " +  member.firstName + " " + member.lastName;
+  }
+
+  
+  function displayNetworkUpdates(updates) {
+    var profileDiv = document.getElementById("networkupdates");
+       
+    for (var i in updates.values) {
+      var key = updates.values[i].updateKey; // each update has a unique key
+      var share = updates.values[i].updateContent.person; // the person sharing content
+      profileDiv.innerHTML += "<img src='" + share.pictureUrl + "'><p id='" + key + "'>" + share.firstName + " " + share.lastName 
+        + " shared " + share.currentShare.comment + ".</p>";
+
+      myPublicShare[i] = share.currentShare.comment;
+      console.log(myPublicShare[i]);      
+    }     
+  }
+  function displayNetworkUpdatesError(error) { return console.log("displayNetworkUpdatesError") }
+</script>
+
      <!-- Google Analytics API -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -59,7 +110,7 @@
             <a href="projects.html"><div class="petal num_3"><p>Projects</p></div></a>
             <a href="art.html"><div class="petal num_4"><p>Graphic Design</p></div></a>
             <a href="dashboards.html"><div class="petal num_5"><p>Dashboards</p></div></a>
-            <a href="mylab"><div class="petal num_6"><p>My Lab</p></div></a>
+            <a href="mylab.html"><div class="petal num_6"><p>My Lab</p></div></a>
             <a href="certificates.html"><div class="petal num_7"><p>Certificates</p></div></a>
             <a href="contact.php"><div class="petal num_8"><p>Contact</p></div></a>
             <div class="stem"></div>
@@ -70,8 +121,8 @@
         </div>
 
         <div class="col-lg-9">
-            <h1>Contact Me</h1>
-            <div class="ad"><img class="card" src="images/card.jpg" alt="Daisy Laflamme 5082929738 Quincy MA USA"></div>
+            <h1>Contact me</h1>
+            <div class="ad"><script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/desislavalaflamme" data-related="false" data-format="inline"></script></div>
             <div class="partners"></div>
             
             <?php
@@ -113,9 +164,18 @@
         </form>    
 </div>
         </div>
-    <br>   
+    <br>  
+    <h3>Linkedin API</h3>
+      <script type="IN/Login"></script>
+      <div id="profiles"></div>
+
+      <h3>Member Updates</h3>
+      <div id="networkupdates"></div> 
+      <h3>Here I share my posts as public:</h3>
+      <div id="mypublicshare"></div>
       </div>
     </div>
+      
   <hr>
   <div class="row"> 
     <div class="col-lg-4">

@@ -35,12 +35,16 @@ body {
 
 header h1{
 	position:absolute;
+	font-family: 'Indie Flower', cursive;
+	left:30%;
+	color:orange;
 }
-header h2{
-	position:absolute;
+header h1 span{
+	color: #090;
 }
+
 a:focus, a:hover {
-	font-style: italic;
+	font-weight: 900;
 }
 a:visited { color:#060;
 }
@@ -52,46 +56,23 @@ a:visited { color:#060;
 
 footer {
 	clear: both;
+	margin-top:100px;
 
 }
 footer p {
 	padding: 1em 1em .2em 0em;
 	margin-left:2em;	
 	clear:both;
-	float: left;
-	color:white;
-
+	color:orange;
 }
+
 footer a {
-	color:white;
+	color:#090;
+}
 
-}
-footer a img {
-	padding: 5em .1em 0em 0em;
-	float: left;
-	border-top-style: none;
-	border-right-style: none;
-	border-bottom-style: none;
-	border-left-style: none;
-	z-index:100000000;
-}
 footer a:hover {
-	opacity:0.5;
+	opacity:0.8;
 }
-.dark {
-	font-weight: bold;
-}
-.red {
-	color: #F60;
-	font-size: 150%;
-	padding: .25em;
-}
-.send {
-	color: green;
-	font-size: 150%;
-	padding:.25em;	
-}
-
 
 /* http://www.rowsdower.org/other/?page=css_transitions_create_a_blooming_flower */
 .flower_container{
@@ -132,6 +113,7 @@ footer a:hover {
   opacity : .4;
   z-index: 10;
 }
+
 .stigma h1{
 	padding-top:30%;
 	font-size: 30px;
@@ -185,9 +167,29 @@ footer a:hover {
   opacity : 0.4;
   z-index: -1;
 }
+
+.connect .petal:after {
+  content : "";
+  display: block;
+  position: absolute;
+  border-radius:50% 50% 4% 50%;/*50% 50% 20% 50%;*/
+  top: 0;
+  left: 0;
+  background-image: url(../images/pink.jpg);
+  width: 100%;
+  height: 100%;
+  opacity : .9;
+  z-index: -1;
+}
+
+.connect .petal p {
+	font-size:16px;
+	color:#000;
+}
+
 .petal p {
-	color:#fff;
-	padding-top:50%;
+	color:#000;
+	padding-top:40%;
 	font-size:16px;
 }
 .petal a {
@@ -285,7 +287,7 @@ transform:rotate(315deg);
 top:45%;left:13%;
 }
 
-.stem{height:70%;width:50%;position:absolute;top:60%;left:80%;z-index:0;border-radius:100px 0px 0px 100px;border-left: 15px solid #090;z-index:0;
+.stem{height:70%;width:50%;position:absolute;top:20%;left:85%;z-index:0;border-radius:100px 0px 0px 100px;border-left: 15px solid #090;z-index:0;
 
 }
 .stem_mask{height:70%;width:67%;position:absolute;top:60%;left:10%;z-index:1;border-radius:0% 80% 80% 0%;background-color:#fff;opacity:1;
@@ -294,9 +296,21 @@ height:155%;top:50%;
 
 }
 .leaf{ border-top: 10px solid #090;position:absolute;height:20%;width:30%;border-radius:100% 100% 100% 100%;z-index:1;}
-.leaf_1{top:115%;left:55%;}
-.leaf_2{top:100%;left:80%;}
+.leaf_1{top:86%;left:65%;}
+.leaf_2{top:60%;left:80%;}
 h2.message{font-family:'helvetica';font-size:14px;font-weight:normal;text-align:center;margin-top:20%;}
+
+.connect .stem{height:70%;width:50%;position:absolute;top:10%;left:25%;z-index:0;border-radius:100px 0px 0px 100px;border-left: 15px solid #090;z-index:0;
+	transform:rotate(-180deg);
+	-ms-transform:rotate(-180deg); /* IE 9 */
+	-webkit-transform:rotate(-60deg); /* Opera, Chrome, and Safari */
+}
+.connect .leaf_2{
+	top:60%;left:10%;
+	transform:rotate(-180deg);
+	-ms-transform:rotate(-180deg); /* IE 9 */
+	-webkit-transform:rotate(-180deg); /* Opera, Chrome, and Safari */
+}
 
 
 /*  flower updates  */
@@ -315,8 +329,55 @@ transition: all 1s ease-in;
 .flower_container:hover .petal.num_7{top:79%;left:45%;/**/transform:rotate(225deg);-ms-transform:rotate(225deg);-moz-transform:rotate(225deg);-webkit-transform:rotate(225deg);-o-transform:rotate(225deg);/**/}
 .flower_container:hover .petal.num_8{top:70%;left:20%;/**/transform:rotate(270deg);-ms-transform:rotate(270deg);-moz-transform:rotate(270deg);-webkit-transform:rotate(270deg);-o-transform:rotate(270deg);/**/}
 
+
+.flower_container:hover .petal.num_1 p{
+	transform:rotate(-40deg);
+	-ms-transform:rotate(-40deg); /* IE 9 */
+	-webkit-transform:rotate(40deg); /* Opera, Chrome, and Safari */
+	margin-top:10%;
+}
+.flower_container:hover .petal.num_2 p{
+	margin-top:20%;
+}
 .flower_container:hover .petal.num_3 p{
-	transform:rotate(70deg);
-	-ms-transform:rotate(70deg); /* IE 9 */
-	-webkit-transform:rotate(-20deg); /* Opera, Chrome, and Safari */
+	transform:rotate(-40deg);
+	-ms-transform:rotate(-40deg); /* IE 9 */
+	-webkit-transform:rotate(-40deg); /* Opera, Chrome, and Safari */
+	margin-left:-40%;
+	margin-top:20%;
+}
+.flower_container:hover .petal.num_4 p{
+	transform:rotate(-90deg);
+	-ms-transform:rotate(-90deg); /* IE 9 */
+	-webkit-transform:rotate(-90deg); /* Opera, Chrome, and Safari */
+	margin-left:-40%;
+	margin-top:20%;
+}
+.flower_container:hover .petal.num_5 p{
+	transform:rotate(-130deg);
+	-ms-transform:rotate(-130deg); /* IE 9 */
+	-webkit-transform:rotate(-130deg); /* Opera, Chrome, and Safari */
+	margin-right:50%;
+	margin-top:40%;
+}
+.flower_container:hover .petal.num_6 p{
+	transform:rotate(-180deg);
+	-ms-transform:rotate(-180deg); /* IE 9 */
+	-webkit-transform:rotate(-180deg); /* Opera, Chrome, and Safari */
+	margin-right:30%;
+	margin-top:40%;
+}
+.flower_container:hover .petal.num_7 p{
+	transform:rotate(135deg);
+	-ms-transform:rotate(135deg); /* IE 9 */
+	-webkit-transform:rotate(135deg); /* Opera, Chrome, and Safari */
+	margin-right:-10%;
+	margin-top:40%;
+}
+.flower_container:hover .petal.num_8 p{
+	transform:rotate(135deg);
+	-ms-transform:rotate(135deg); /* IE 9 */
+	-webkit-transform:rotate(90deg); /* Opera, Chrome, and Safari */
+	margin-right:-40%;
+	margin-top:30%;
 }
