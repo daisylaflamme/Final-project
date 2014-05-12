@@ -59,7 +59,7 @@
     IN.API.Profile("me").result(displayProfiles);
 
     IN.API.MemberUpdates("me")
-     .params({"type": "SHAR", "count": 20}) // get the 20 most-recent Shares for the viewer and EjDUWNoC3C
+     .params({"type": "SHAR", "count": 20}) 
      .result(displayNetworkUpdates)
      .error(displayNetworkUpdatesError);
 
@@ -78,8 +78,8 @@
     for (var i in updates.values) {
       var key = updates.values[i].updateKey; // each update has a unique key
       var share = updates.values[i].updateContent.person; // the person sharing content
-      profileDiv.innerHTML += "<img src='" + share.pictureUrl + "'><p id='" + key + "'>" + share.firstName + " " + share.lastName 
-        + " shared " + share.currentShare.comment + ".</p>";
+      profileDiv.innerHTML += "<div class='row'><div class='col-sm-1'><img src='" + share.pictureUrl + "'></div><div class='col-sm-6'><p id='" + key + "'>" + share.firstName + " " + share.lastName 
+        + " shared " + share.currentShare.comment + ".</p></div></div>";
 
       myPublicShare[i] = share.currentShare.comment;
       console.log(myPublicShare[i]);      
@@ -101,29 +101,54 @@
 </head>
 
 <body>
-      <div class="row top-space">
-        <div class="col-lg-3">
-          <nav class="flower_container">
-            <a href="index-3.html"><div class="stigma"><h1>Daisy LaFlamme<br><small>Web Designer</small></h1></div></a>
-            <a href="resume.html"><div class="petal num_1 curent"><p>Resume</p></div></a>
-            <a href="ws.html"><div class="petal num_2"><p>Web Design</p></div></a>
-            <a href="projects.html"><div class="petal num_3"><p>Projects</p></div></a>
-            <a href="art.html"><div class="petal num_4"><p>Graphic Design</p></div></a>
-            <a href="dashboards.html"><div class="petal num_5"><p>Dashboards</p></div></a>
-            <a href="mylab.html"><div class="petal num_6"><p>My Lab</p></div></a>
-            <a href="certificates.html"><div class="petal num_7"><p>Certificates</p></div></a>
-            <a href="contact.php"><div class="petal num_8"><p>Contact</p></div></a>
-            <div class="stem"></div>
-            <!--<div class="stem_mask"></div>-->
-            <div class="leaf leaf_1"></div>
-            <div class="leaf leaf_2"></div>
-          </nav> 
-        </div>
+  <div class="row top-space">
+    <div class="col-lg-3 col-md-3 col-sm-3">
+      <nav class="flower_container">
+        <a href="index-3.html"><div class="stigma"><h1>Daisy LaFlamme<br><small>Web Designer</small></h1></div></a>
+        <a href="resume.html"><div class="petal num_1 curent"><p>Resume</p></div></a>
+        <a href="ws.html"><div class="petal num_2"><p>Web Design</p></div></a>
+        <a href="projects.html"><div class="petal num_3"><p>Projects</p></div></a>
+        <a href="art.html"><div class="petal num_4"><p>Graphics</p></div></a>
+        <a href="dashboards.html"><div class="petal num_5"><p>Dashboards</p></div></a>
+        <a href="mylab.html"><div class="petal num_6"><p>My Lab</p></div></a>
+        <a href="certificates.html"><div class="petal num_7"><p>Certificates</p></div></a>
+        <a href="contact.php"><div class="petal num_8"><p>Contact</p></div></a>
+        <div class="stem"></div>
+        <!--<div class="stem_mask"></div>-->
+        <div class="leaf leaf_1"></div>
+        <div class="leaf leaf_2"></div>
+      </nav> 
+      <div class="clearfix"></div>
+      <div class="flower_container connect">
+        <a href="index-3.html"><div class="stigma"><h1>Connect</h1></div></a>
+        <a target="_blank" href = "https://twitter.com/DesiPink"><div class="petal num_1"><p>Twitter</p></div></a>
+        <a target="_blank" href = "https://github.com/daisylaflamme"><div class="petal num_2"><p>Github</p></div></a>
+        <a target="_blank" href = "http://www.linkedin.com/in/desislavalaflamme"><div class="petal num_3"><p>LinkedIn</p></div></a>
+        <a target="_blank" href = "http://daisylaflamme.com/wordpress1/"><div class="petal num_4"><p>Blog</p></div></a>
+        <a target="_blank" href="https://plus.google.com/u/0/"><div class="petal num_5"><p>Google +</p></div></a>
+        <a target="_blank" href = "http://www.facebook.com/desi.pink.5"><div class="petal num_6"><p>Facebook</p></div></a>
+        <a target="_blank" href = "http://www.youtube.com/watch?v=cpE4PLeVico"><div class="petal num_7"><p>YouTube</p></div></a>
+        <a href="mailto:daisy@daisylaflamme.net"><div class="petal num_8"><p>Email</p></div></a>
+        <div class="stem"></div>
+        <!--<div class="stem_mask"></div>-->
+        <div class="leaf leaf_1"></div>
+        <div class="leaf leaf_2"></div>
+      </div>  
+    </div>
 
-        <div class="col-lg-9">
+    <div class=" col-lg-9 col-md-9 col-sm-9">
             <h1>Contact me</h1>
             <div class="ad"><script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/desislavalaflamme" data-related="false" data-format="inline"></script></div>
             <div class="partners"></div>
+
+            <h3>Linkedin API</h3>
+            <script type="IN/Login"></script>
+            <div id="profiles"></div>
+
+            <h3>Member Updates</h3>
+            <div id="networkupdates"></div> 
+            <h3>Here I share my posts as public:</h3>
+            <div id="mypublicshare"></div>
             
             <?php
             $name = $_POST['name'];
@@ -162,32 +187,12 @@
             <input id="submit" name="submit" type="submit" value="Submit">
                 
         </form>    
-</div>
-        </div>
-    <br>  
-    <h3>Linkedin API</h3>
-      <script type="IN/Login"></script>
-      <div id="profiles"></div>
-
-      <h3>Member Updates</h3>
-      <div id="networkupdates"></div> 
-      <h3>Here I share my posts as public:</h3>
-      <div id="mypublicshare"></div>
-      </div>
-    </div>
-      
+    </div>     
   <hr>
   <div class="row"> 
-    <div class="col-lg-4">
-      <footer>
-           <a href="mailto:daisy@daisylaflamme.net"><img src="images/e.gif" alt="Email"></a>
-            <a target="_blank" href = "http://daisylaflamme.com/wordpress1/"><img src="images/w.gif" alt="Wordpress Blog"></a>
-            <a target="_blank" href = "http://www.youtube.com/watch?v=cpE4PLeVico"><img src="images/y.gif" alt="YouTube Website Presintation"></a>
-            <a target="_blank" href = "http://www.facebook.com/desi.pink.5"><img src="images/f.gif" alt="Facebook Profile"></a>
-            <a target="_blank" href = "https://twitter.com/DesiPink"><img src="images/t.gif" alt="Twitter Profile"></a>
-            <a target="_blank" href = "https://github.com/daisylaflamme"><img src="images/github.gif" alt="Github Account"></a>  
-            <a target="_blank" href = "http://www.linkedin.com/in/desislavalaflamme"><img src="images/in.gif" alt="LinkedIn Profile"></a>  
-            <p><small>
+    <div class="col-lg-10">
+      <footer>  
+        <p class="text-center"><small>
             <script type="text/javascript" >
                 var today = new Date();
                 document.write( "&copy;&nbsp;" );
@@ -198,6 +203,6 @@
           </small></p>           
       </footer>
     </div>
-  </div> 
+</div> 
 </body>
 </html>

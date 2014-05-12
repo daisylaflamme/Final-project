@@ -16,27 +16,11 @@ html {
 body {
 	font-family: 'Prosto One',cursive;
 	height:100%;
-	/*
-	font-size: 87.5%;
-	width: 80%;
-	margin: 20px auto !important;
-	border: 0px solid #CCCCCC;
-	border-radius:14px;
-	-moz-box-shadow: 1px 4px 30px #6d6b6b;
-	-webkit-box-shadow: 1px 4px 30px #6d6b6b;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=30, Direction=166, Color=#6d6b6b)";
-	box-shadow: 1px 4px 30px #6d6b6b;
-	
-	background-image: url(../images/bg.jpg);
-	background-position: right;
-	background-repeat: no-repeat;
-	*/
 }
 
 header h1{
 	position:absolute;
 	font-family: 'Indie Flower', cursive;
-	left:30%;
 	color:orange;
 }
 header h1 span{

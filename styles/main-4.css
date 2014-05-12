@@ -16,11 +16,14 @@ html {
 body {
 	font-family: 'Prosto One',cursive;
 	height:100%;
-	/*	
-	background-image: url(../images/bg.jpg);
-	background-position: top right;
-	background-repeat: no-repeat;
-	*/
+}
+header h1{
+	position:absolute;
+	font-family: 'Indie Flower', cursive;
+	color:orange;
+}
+header h1 span{
+	color: #090;
 }
 .top-space{
 	margin-top:30px;
@@ -333,32 +336,24 @@ figcaption {
 
 footer {
 	clear: both;
+	margin-top:10px;
 
 }
 footer p {
 	padding: 1em 1em .2em 0em;
 	margin-left:2em;	
 	clear:both;
-	float: left;
-	color:green;
-
+	color:orange;
 }
+
 footer a {
-	color:green;
+	color:#090;
+}
 
-}
-footer a img {
-	padding: 5em .1em 0em 0em;
-	float: left;
-	border-top-style: none;
-	border-right-style: none;
-	border-bottom-style: none;
-	border-left-style: none;
-	z-index:100000000;
-}
 footer a:hover {
-	opacity:0.5;
+	opacity:0.8;
 }
+
 .dark {
 	font-weight: bold;
 }
@@ -415,7 +410,7 @@ text-align: center;
   background-image: url(../images/stem.jpeg);
   width: 100%;
   height: 100%;
-  opacity : .4;
+  opacity : .1;
   z-index: 10;
 }
 .stigma h1{
@@ -424,10 +419,12 @@ text-align: center;
 	font-family: 'Indie Flower', cursive;
 	z-index: 1000;
 	color:black;
+	font-weight: 900;
 }
 .stigma h1 small{
 	color: black;
 	font-size:11px;
+	font-weight: 900;
 }
 .flower_container:hover .stigma{height:37%;width:37%;border-radius:50%;border-width:0px;top:44%;left:45%; z-index:5;}
 .flower_container:hover a p {visibility:visible;}
@@ -466,8 +463,26 @@ text-align: center;
   opacity : 0.4;
   z-index: -1;
 }
+.connect .petal:after {
+  content : "";
+  display: block;
+  position: absolute;
+  border-radius:50% 50% 4% 50%;/*50% 50% 20% 50%;*/
+  top: 0;
+  left: 0;
+  background-image: url(../images/pink.jpg);
+  width: 100%;
+  height: 100%;
+  opacity : .9;
+  z-index: -1;
+}
+
+.connect .petal p {
+	font-size:10px;
+	color:#000;
+}
 .petal p {
-	color:#fff;
+	color:#000;
 	padding-top:50%;
 	font-size:10px;
 }
@@ -493,12 +508,6 @@ transform:rotate(45deg);
 -o-transform:rotate(45deg);
 }
 .flower_container:hover .petal.num_2{
-/*top:31%;left:54%;
-transform:rotate(93deg);
--ms-transform:rotate(93deg);
--moz-transform:rotate(93deg);
--webkit-transform:rotate(93deg);
--o-transform:rotate(93deg);/**/
 top:11%;left:45%;
 }
 .num_3{
@@ -581,6 +590,9 @@ height:155%;top:50%;
 .leaf_2{top:15%;left:21%;}
 h2.message{font-family:'helvetica';font-size:14px;font-weight:normal;text-align:center;margin-top:20%;}
 
+.connect .stem{height:70%;width:50%;position:absolute;top:-15%;left:32%;z-index:0;border-radius:100px 0px 0px 100px;border-left: 10px solid #090;z-index:0;
+}
+.connect .leaf_2{top:11%;left:32%;}
 
 /*  flower updates  */
 .petal{
