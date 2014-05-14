@@ -78,8 +78,8 @@
     for (var i in updates.values) {
       var key = updates.values[i].updateKey; // each update has a unique key
       var share = updates.values[i].updateContent.person; // the person sharing content
-      profileDiv.innerHTML += "<div class='row'><div class='col-sm-1'><img src='" + share.pictureUrl + "'></div><div class='col-sm-6'><p id='" + key + "'>" + share.firstName + " " + share.lastName 
-        + " shared " + share.currentShare.comment + ".</p></div></div>";
+      profileDiv.innerHTML += "<div class='row in-post'><div class='col-sm-3 in-img'><img src='" + share.pictureUrl + "'></div><div class='col-sm-8'><p id='" + key + "'> <span class='in-name'>" + share.firstName + " " + share.lastName 
+        + " </span> shared <br><br> " + share.currentShare.comment + ".</p></div></div>";
 
       myPublicShare[i] = share.currentShare.comment;
       console.log(myPublicShare[i]);      
@@ -137,57 +137,58 @@
     </div>
 
     <div class=" col-lg-9 col-md-9 col-sm-9">
-            <h1>Contact me</h1>
-            <div class="ad"><script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/desislavalaflamme" data-related="false" data-format="inline"></script></div>
-            <div class="partners"></div>
 
-            <h3>Linkedin API</h3>
-            <script type="IN/Login"></script>
-            <div id="profiles"></div>
+      <h1>Contact me</h1>
+      <?php
+      $name = $_POST['name'];
+      $email = $_POST['email'];
+      $message = $_POST['message'];
+      $from = 'From: DaisyLaflammeWebsite'; 
+      $to = 'otli4ni4ka@yahoo.com'; 
+      $subject = 'Contact';
+      $human = $_POST['human'];
+              
+      $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+                  
+      if ($_POST['submit'] && $human == '4') {                 
+          if (mail ($to, $subject, $body, $from)) { 
+          echo '<p class="send">Your message has been sent!</p>';
+      } else { 
+          echo '<p class="red">Something went wrong, go back and try again!</p>'; 
+      } 
+      } else if ($_POST['submit'] && $human != '4') {
+      echo '<p class="red">You answered the anti-spam question incorrectly!</p>';
+      }
+      ?>
 
-            <h3>Member Updates</h3>
-            <div id="networkupdates"></div> 
-            <h3>Here I share my posts as public:</h3>
-            <div id="mypublicshare"></div>
-            
-            <?php
-            $name = $_POST['name'];
-            $email = $_POST['email'];
-            $message = $_POST['message'];
-            $from = 'From: DaisyLaflammeWebsite'; 
-            $to = 'otli4ni4ka@yahoo.com'; 
-            $subject = 'Contact';
-            $human = $_POST['human'];
-                    
-            $body = "From: $name\n E-Mail: $email\n Message:\n $message";
-                        
-            if ($_POST['submit'] && $human == '4') {                 
-                if (mail ($to, $subject, $body, $from)) { 
-                echo '<p class="send">Your message has been sent!</p>';
-            } else { 
-                echo '<p class="red">Something went wrong, go back and try again!</p>'; 
-            } 
-            } else if ($_POST['submit'] && $human != '4') {
-            echo '<p class="red">You answered the anti-spam question incorrectly!</p>';
-            }
-        ?>
-            <h1>Send me a message</h1>
-                <form method="post" action="contact.php">
+      <form method="post" action="contact.php">               
+        <label>Name</label>
+        <input name="name" placeholder="Your Name" required>
                 
-            <label>Name</label>
-            <input name="name" placeholder="Your Name" required>
-                    
-            <label>Email</label>
-            <input name="email" type="email" placeholder="Your Email" required>
-                    
-            <label>Message</label>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-             <label>*What is 2+2? (Anti-spam)</label>
+        <label>Email</label>
+        <input name="email" type="email" placeholder="Your Email" required>
+                
+        <label>Message</label>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+         <label>*What is 2+2? (Anti-spam)</label>
         <input name="human" placeholder="Type Your Answer">       
-            <input id="submit" name="submit" type="submit" value="Submit">
-                
-        </form>    
-    </div>     
+        <input id="submit" name="submit" type="submit" value="Submit">                
+      </form> 
+
+      <!--login with linkedin to see my updates-->
+      <br>
+      <br>
+      <div class="ad"><script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/desislavalaflamme" data-related="false" data-format="inline"></script></div>
+
+      <small>Login with linkedin to see what I am up to</small>
+      <script type="IN/Login"></script>
+      <div id="profiles"></div>
+      <!--member network updates-->
+      <div id="networkupdates"></div> <br>
+      <small>Public posts if any:</small>
+      <div id="mypublicshare"></div> 
+    </div>  
+  </div> 
   <hr>
   <div class="row"> 
     <div class="col-lg-10">

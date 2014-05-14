@@ -20,11 +20,13 @@
 <meta name="description" content="Daisy LaFlamme Resume">
 <meta name="keywords" content="resume, university, experiance, web design, graphic design, user experiance, user interface, small budget projects, freelancer, front-end designer, web developer">
 <meta name="robots" content="index,follow"/>
+
 <!-- mobil device instructions -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link href='http://fonts.googleapis.com/css?family=Prosto+One' rel='stylesheet' type='text/css'>
+
 <!-- javascript -->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -37,6 +39,11 @@
 <link rel="stylesheet" href="styles/main-4.css">
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+<!--processing-->
+<script src='https://github.com/downloads/processing-js/processing-js/processing-1.4.1.js'></script>
+
+
 <!-- 1. Include the LinkedIn JavaScript API and define a onLoad callback function -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.5b1.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>  
@@ -58,7 +65,7 @@
     .fields("firstName", "lastName", "industry")
     .params({"start": 10, "count": 300})
     .result(displayConnections)
-    .error(displayConnectionsErrors);
+    .error(displayConnectionsError);
 
     IN.API.PeopleSearch()
     .fields("firstName", "lastName", "positions")
@@ -71,12 +78,7 @@
      .result(displayNetworkUpdates)
      .error(displayNetworkUpdatesError);
 
-    IN.API.MemberUpdates("me","qPhu7yshYb")
-     .params({"type": "SHAR", "count": 20}) // get the 20 most-recent Shares for the viewer and EjDUWNoC3C
-     .result(displayMemberkUpdates)
-     .error(displayMemberUpdatesError);
-
-  }
+  }//end onLinkedInAuth
 
   function displayProfiles(profiles) {
     member = profiles.values[0];
@@ -84,15 +86,55 @@
       "<p id=\"" + member.id + "\">Hello, " +  member.firstName + " " + member.lastName + ". Here is a list of your connections:</p>";
   }
 
-  function displayConnections(connections) {
-  var connectionsDiv = document.getElementById("connections");
+  var canvas = document.getElementsByTagName('canvas')[0];
+  var sr=0, hr=0, re=0, prc=0;
 
-  var members = connections.values; 
-  for (var member in members) {
-    connectionsDiv.innerHTML += "<p>" + members[member].firstName + " " + members[member].lastName
-      + " works in the " + members[member].industry + " industry";
-    }     
-  }  
+  function displayConnections(connections) {
+    var connectionsDiv = document.getElementById("connections");
+    var members = connections.values; 
+    for (var member in members) {
+      connectionsDiv.innerHTML += "<p>" + members[member].firstName + " " + members[member].lastName
+        + " works in the " + members[member].industry + " industry";
+      if(members[member].industry == "Staffing and Recruiting"){
+        sr++;
+      } else if (members[member].industry == "Human Resources") {
+        hr++;
+      } else if (members[member].industry == "Real Estate") {
+        re++;
+      } else if (members[member].industry == "Public Relations and Communications") {
+        prc++;
+      } else{console.log("hi daisy")}           
+    } 
+    sketch(p); 
+  }
+
+
+  function sketch(p) {
+    function normalizeCoordinates() {
+      // flip Processing's weird coordinate system with (0, 0) in the top left
+      p.translate(0, 400)
+      p.scale(1, -1);
+    }
+    function setup() {
+      p.size(800, 400);
+      normalizeCoordinates();
+      p.fill(0, 255, 0);
+      p.rect(0, 0, 50, sr);
+      p.fill(0, 255, 0);
+      p.rect(50, 0, 50, hr);   
+      p.fill(100, 255, 0);
+      p.rect(50, 0, 50, re); 
+      p.fill(150, 255, 0);
+      p.rect(50, 0, 50, prc);             
+    }//end setup
+    function draw() {
+    }//end draw
+    p.setup = setup;
+    p.draw = draw;
+  }
+  var p = new Processing(canvas, sketch); // actually attach and run the sketch
+
+
   function displayConnectionsErrors(error) {  }
 
   function displayPeopleSearch(peopleSearch) {
@@ -113,8 +155,8 @@
   for (var i in updates.values) {
     var key = updates.values[i].updateKey; // each update has a unique key
     var share = updates.values[i].updateContent.person; // the person sharing content
-    profileDiv.innerHTML += "<img src='" + share.pictureUrl + "'><p id='" + key + "'>" + share.firstName + " " + share.lastName 
-      + " shared " + share.currentShare.comment + ".</p>";
+    profileDiv.innerHTML += "<div class='row in-post'><div class='col-sm-3 in-img'><img src='" + share.pictureUrl + "'></div><div class='col-sm-8'><p id='" + key + "'> <span class='in-name'>" + share.firstName + " " + share.lastName 
+        + " </span> shared <br><br> " + share.currentShare.comment + ".</p></div></div>";
     }     
   }
   function displayNetworkUpdatesError(error) { return console.log("displayNetworkUpdatesError") }
@@ -185,6 +227,7 @@
       <h3>Linkedin API</h3>
       <script type="IN/Login"></script>
       <div id="profiles"></div>
+      <canvas></canvas>
       <div id="connections"></div>
       <h3>Web Designers around you</h3>
       <div id="peoplesearch"></div>
@@ -203,7 +246,7 @@
       <h3>Full member profile</h3>
       <p>Here I use the linkedin API to pull out my full profile as a widget</p>
       <script type="IN/FullMemberProfile" data-id="qPhu7yshYb" data-firstName="Desislava Daisy" data-lastName="LaFlamme"></script>
-      <h3>Simulation of linkedin widget</h3>
+      <h3>Mockup of linkedin widget</h3>
        <a href="www.linkedin.com/in/desislavalaflamme" ><div><iframe src="iframe.html" width="400"></iframe></div></a>
     </div>
   </div>
