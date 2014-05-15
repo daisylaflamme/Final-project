@@ -137,56 +137,68 @@
     </div>
 
     <div class=" col-lg-9 col-md-9 col-sm-9">
-
-      <h1>Contact me</h1>
-      <?php
-      $name = $_POST['name'];
-      $email = $_POST['email'];
-      $message = $_POST['message'];
-      $from = 'From: DaisyLaflammeWebsite'; 
-      $to = 'otli4ni4ka@yahoo.com'; 
-      $subject = 'Contact';
-      $human = $_POST['human'];
-              
-      $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+      <div class="row">
+        <div class="row-lg-6 col-md-6 col-sm-6">
+          <h1>Contact me</h1>
+          <div class="ad"><script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/desislavalaflamme" data-related="false" data-format="inline"></script></div>
+          <?php
+          $name = $_POST['name'];
+          $email = $_POST['email'];
+          $message = $_POST['message'];
+          $from = 'From: DaisyLaflammeWebsite'; 
+          $to = 'otli4ni4ka@yahoo.com'; 
+          $subject = 'Contact';
+          $human = $_POST['human'];
                   
-      if ($_POST['submit'] && $human == '4') {                 
-          if (mail ($to, $subject, $body, $from)) { 
-          echo '<p class="send">Your message has been sent!</p>';
-      } else { 
-          echo '<p class="red">Something went wrong, go back and try again!</p>'; 
-      } 
-      } else if ($_POST['submit'] && $human != '4') {
-      echo '<p class="red">You answered the anti-spam question incorrectly!</p>';
-      }
-      ?>
+          $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+                      
+          if ($_POST['submit'] && $human == '4') {                 
+              if (mail ($to, $subject, $body, $from)) { 
+              echo '<p class="send">Your message has been sent!</p>';
+          } else { 
+              echo '<p class="red">Something went wrong, go back and try again!</p>'; 
+          } 
+          } else if ($_POST['submit'] && $human != '4') {
+          echo '<p class="red">You answered the anti-spam question incorrectly!</p>';
+          }
+          ?>
 
-      <form method="post" action="contact.php">               
-        <label>Name</label>
-        <input name="name" placeholder="Your Name" required>
-                
-        <label>Email</label>
-        <input name="email" type="email" placeholder="Your Email" required>
-                
-        <label>Message</label>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-         <label>*What is 2+2? (Anti-spam)</label>
-        <input name="human" placeholder="Type Your Answer">       
-        <input id="submit" name="submit" type="submit" value="Submit">                
-      </form> 
+          <form method="post" action="contact.php">               
+            <label>Name</label>
+            <input name="name" placeholder="Your Name" required>
+                    
+            <label>Email</label>
+            <input name="email" type="email" placeholder="Your Email" required>
+                    
+            <label>Message</label>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+             <label>*What is 2+2? (Anti-spam)</label>
+            <input name="human" placeholder="Type Your Answer">       
+            <input id="submit" name="submit" type="submit" value="Submit">                
+          </form> 
+        </div>  
+
+        <div class="row-lg-6 col-md-6 col-sm-6">
+          <br>
+          <div class="upto">  
+            <p>What I am up to:</p>
+            <a class="twitter-timeline" width="300" height="450" data-chrome="noheader nofooter transparent noscrollbar"  data-border-color="#0c717a" href="https://twitter.com/DesiPink"  data-widget-id="344905992468836354">Tweets by Daisy LaFlamme</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+        </div>
+      </div>  
 
       <!--login with linkedin to see my updates-->
       <br>
       <br>
-      <div class="ad"><script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/desislavalaflamme" data-related="false" data-format="inline"></script></div>
-
+      
       <small>Login with linkedin to see what I am up to</small>
       <script type="IN/Login"></script>
       <div id="profiles"></div>
-      <!--member network updates-->
+      <!--member network updates
       <div id="networkupdates"></div> <br>
       <small>Public posts if any:</small>
-      <div id="mypublicshare"></div> 
+      <div id="mypublicshare"></div> -->
     </div>  
   </div> 
   <hr>
